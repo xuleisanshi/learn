@@ -1,4 +1,4 @@
-package com.learn.java.datastructure;
+package com.lei.learn.dataStructure;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DatastructureApplicationTests {
+public class DataStructureApplicationTests {
 
 	@Test
 	public void contextLoads() {
