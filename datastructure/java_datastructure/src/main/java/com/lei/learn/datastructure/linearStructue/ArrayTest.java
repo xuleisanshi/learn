@@ -1,4 +1,4 @@
-package com.lei.learn.datastructure.lineStructue;
+package com.lei.learn.datastructure.linearStructue;
 
 import java.util.Arrays;
 
