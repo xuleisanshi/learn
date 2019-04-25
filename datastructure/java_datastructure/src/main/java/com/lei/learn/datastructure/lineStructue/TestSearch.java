@@ -16,20 +16,21 @@ public class TestSearch {
     }
     System.out.println(index);
 
-    targetElement = 8;
+    targetElement = 0;
+    index = -1;
     //binary search, a sorted array will have a good performance
     int beginIndex = 0;
     int endIndex = targetArray.length;
     int midIndex = (beginIndex + endIndex) / 2;
-    while (true) {
+    while (beginIndex <= endIndex) {
       if (targetArray[midIndex] == targetElement) {
         index = midIndex;
         break;
       } else if (targetArray[midIndex] > targetElement) {
-        endIndex = midIndex-1;
-        midIndex = (endIndex+beginIndex) / 2;
+        endIndex = midIndex - 1;
+        midIndex = (endIndex + beginIndex) / 2;
       } else {
-        beginIndex = midIndex+1;
+        beginIndex = midIndex + 1;
         midIndex = (beginIndex + endIndex) / 2;
       }
     }

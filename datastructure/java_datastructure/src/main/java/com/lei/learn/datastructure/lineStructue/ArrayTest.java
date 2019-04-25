@@ -25,6 +25,9 @@ public class ArrayTest {
 //    System.out.println(Arrays.toString(arrayObject.delete(6)));
     System.out.println(Arrays.toString(arrayObject.insert(6,6)));
 
+    System.out.println(arrayObject.linearSearch(6));
+    System.out.println(arrayObject.binarySearch(10));
+
     //    int[] arr1 = new int[3];
     //    int[] arr2 = {1, 2, 3, 4, 5};
     //    arr1[0] = 1;

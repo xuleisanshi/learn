@@ -68,4 +68,37 @@ public class ArrayObject extends RuntimeException {
     elements = tmp;
     return elements;
   }
+
+  public int linearSearch(int targetElement) {
+    int index = -1;
+    for (int i = 0; i < elements.length; i++) {
+      if (elements[i] == targetElement) {
+        index = i;
+        break;
+      }
+    }
+    return index;
+  }
+
+  public int binarySearch(int targetElement) {
+    int index = -1;
+    int beginIndex = 0;
+    int endIndex = elements.length;
+    //TODO element should be sorted ascending
+    int midIndex = (beginIndex + endIndex) / 2;
+    // the condition to end the loop
+    while (beginIndex < endIndex) {
+      if (elements[midIndex] == targetElement) {
+        index = midIndex;
+        break;
+      } else if (elements[midIndex] > targetElement) {
+        endIndex = midIndex - 1;
+        midIndex = (endIndex + beginIndex) / 2;
+      } else {
+        beginIndex = midIndex + 1;
+        midIndex = (beginIndex + endIndex) / 2;
+      }
+    }
+    return index;
+  }
 }
