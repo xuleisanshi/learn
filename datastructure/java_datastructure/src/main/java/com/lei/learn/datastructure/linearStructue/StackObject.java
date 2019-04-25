@@ -35,4 +35,6 @@ public class StackObject extends RuntimeException {
   public boolean isEmpty(){
     return elements.length ==0;
   }
+
+  //TODO top function
 }
