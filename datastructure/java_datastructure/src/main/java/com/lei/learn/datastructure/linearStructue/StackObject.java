@@ -1,7 +1,7 @@
 package com.lei.learn.datastructure.linearStructue;
 
 public class StackObject extends RuntimeException {
-  private String[] elements=new String[0];
+  private String[] elements = new String[0];
 
   public StackObject() {
 
@@ -13,7 +13,7 @@ public class StackObject extends RuntimeException {
     for (int i = 0; i < elements.length; i++) {
       temp[i] = elements[i];
     }
-    temp[elements.length ] = element;
+    temp[elements.length] = element;
     elements = temp;
   }
 
@@ -32,8 +32,15 @@ public class StackObject extends RuntimeException {
   }
 
   //TODO Is this stack empty
-  public boolean isEmpty(){
-    return elements.length ==0;
+  public boolean isEmpty() {
+    return elements.length == 0;
   }
 
+  //TODO get the top of the stack
+  public String top() {
+    if (elements.length == 0) {
+      throw new RuntimeException("this is stack is empty");
+    }
+    return elements[elements.length - 1];
+  }
 }
