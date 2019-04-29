@@ -4,6 +4,14 @@ public class RecursionTest {
     public static void main(String[] args) {
         System.out.println(factorial(4));
 
+
+        System.out.println(fibonacci(1));
+        System.out.println(fibonacci(2));
+        System.out.println(fibonacci(3));
+        System.out.println(fibonacci(4));
+        System.out.println(fibonacci(5));
+        System.out.println(fibonacci(6));
+
     }
 
     //todo get a result of A!
@@ -14,5 +22,13 @@ public class RecursionTest {
             return value * factorial(value - 1);
         }
     }
-    //TODO Fibonacci
+    //TODO Fibonacci //2^n
+
+    public static int fibonacci(int index) {
+        if (index <= 2) {
+            return 1;
+        } else {
+            return fibonacci(index - 1) + fibonacci(index - 2);
+        }
+    }
 }
