@@ -2,14 +2,16 @@ package com.lei.learn.datastructure.linearStructue;
 
 public class LoopNode {
     private String data;
-    private Node next;
+    private LoopNode next;
 
     public LoopNode(String data) {
         this.data = data;
+        this.next = this;
+
     }
 
     //TODO get next node
-    public Node getNext() {
+    public LoopNode getNext() {
         return this.next;
     }
 
@@ -18,8 +20,8 @@ public class LoopNode {
         return this.data;
     }
 
-    public void setNext(Node node) {
-        this.next = node;
+    public void setNext(LoopNode loopNode) {
+        this.next = loopNode;
     }
 
     public void setData(String data) {
@@ -27,6 +29,22 @@ public class LoopNode {
         this.data = data;
     }
 
+    //after a new node to loop
+    public void after(LoopNode loopNode) {
+        LoopNode currentNextLoopNode = this.getNext();
+        this.setNext(loopNode);
+        loopNode.setNext(currentNextLoopNode);
+    }
+
+    public void showLoopNode(){
+        LoopNode currentLoopNode = this;
+        int i=0;
+        while(currentLoopNode.getNext()!=null&&i<10){
+            i++;
+            System.out.println(currentLoopNode.getData());
+            currentLoopNode = currentLoopNode.getNext();
+        }
+    }
 
 
 }
