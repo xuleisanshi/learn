@@ -2,15 +2,17 @@ package com.lei.learn.datastructure.linearStructue;
 
 public class RecursionTest {
     public static void main(String[] args) {
-        System.out.println(factorial(4));
+//        System.out.println(factorial(4));
+//
+//
+//        System.out.println(fibonacci(1));
+//        System.out.println(fibonacci(2));
+//        System.out.println(fibonacci(3));
+//        System.out.println(fibonacci(4));
+//        System.out.println(fibonacci(5));
+//        System.out.println(fibonacci(6));
 
-
-        System.out.println(fibonacci(1));
-        System.out.println(fibonacci(2));
-        System.out.println(fibonacci(3));
-        System.out.println(fibonacci(4));
-        System.out.println(fibonacci(5));
-        System.out.println(fibonacci(6));
+        hanoiTower(3, "a", "b", "c");
 
     }
 
@@ -29,6 +31,20 @@ public class RecursionTest {
             return 1;
         } else {
             return fibonacci(index - 1) + fibonacci(index - 2);
+        }
+    }
+
+    //TODO Hanoi TOWER/
+    /*
+
+     */
+    public static void hanoiTower(int n, String from, String in, String to) {
+        if (n == 1) {
+            System.out.println("1" + from + to);
+        } else {
+            hanoiTower(n - 1, from, to, in);
+            System.out.println(n + from + to);
+            hanoiTower(n - 1, in, from, to);
         }
     }
 }
