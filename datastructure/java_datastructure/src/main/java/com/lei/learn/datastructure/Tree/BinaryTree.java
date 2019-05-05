@@ -1,5 +1,7 @@
 package com.lei.learn.datastructure.Tree;
 
+import apple.laf.JRSUIUtils;
+
 public class BinaryTree {
 
     private TreeNode rootNode;
@@ -16,11 +18,20 @@ public class BinaryTree {
     public void frontShow() {
         this.getRootNode().frontShow();
     }
-    public void midShow(){
+
+    public void midShow() {
         this.getRootNode().midShow();
     }
 
-    public void afterShow(){
+    public void afterShow() {
         this.getRootNode().afterShow();
+    }
+
+    public TreeNode frontSearch(String target) {
+        return this.getRootNode().frontSearch(target);
+    }
+
+    public TreeNode midSearch(String target) {
+        return this.getRootNode().midSearch(target);
     }
 }

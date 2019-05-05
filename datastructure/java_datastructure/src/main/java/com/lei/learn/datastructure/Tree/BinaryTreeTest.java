@@ -29,5 +29,16 @@ public class BinaryTreeTest {
         binaryTree.afterShow();
 
 
+        System.out.println("=========front search========");
+        TreeNode treeNode = binaryTree.frontSearch("E");
+        System.out.println(treeNode);
+
+
+        System.out.println("=========mid search========");
+        TreeNode treeNode1 = binaryTree.midSearch("E");
+        System.out.println(treeNode1);
+        System.out.println(treeNode1.getValue());
+
+
     }
 }

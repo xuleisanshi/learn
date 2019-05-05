@@ -67,4 +67,44 @@ public class TreeNode {
         System.out.println(this.getValue());
     }
 
+    public TreeNode frontSearch(String target) {
+        TreeNode targetNode = null;
+
+        if (this.getValue() == target) {
+            return this;
+        }
+
+        if (this.getLeftNode() != null) {
+            targetNode = this.getLeftNode().frontSearch(target);
+        }
+        if (null != targetNode) {
+            return targetNode;
+        }
+        if (null != this.getRightNode()) {
+            targetNode = this.getRightNode().frontSearch(target);
+        }
+        
+        return targetNode;
+    }
+
+    public TreeNode midSearch(String target) {
+        TreeNode targetNode = null;
+
+        if (this.getLeftNode() != null) {
+            targetNode = this.getLeftNode().midSearch(target);
+            if (targetNode != null) {
+                return targetNode;
+            }
+        }
+        if (this.getValue() == target)
+            return this;
+
+        if (null != this.getRightNode()) {
+            targetNode = this.getRightNode().midSearch(target);
+        }
+
+        return targetNode;
+
+    }
+
 }
