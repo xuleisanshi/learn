@@ -83,7 +83,7 @@ public class TreeNode {
         if (null != this.getRightNode()) {
             targetNode = this.getRightNode().frontSearch(target);
         }
-        
+
         return targetNode;
     }
 
@@ -104,7 +104,25 @@ public class TreeNode {
         }
 
         return targetNode;
-
     }
 
+    public void delete(String target) {
+        TreeNode parent = this;
+        if (parent.getLeftNode().getValue() == target) {
+            parent.setLeftNode(null);
+            return;
+        }
+        if (parent.getRightNode().getValue() == target) {
+            parent.setRightNode(null);
+            return;
+        }
+        parent = parent.getLeftNode();
+        if (parent != null) {
+            parent.delete(target);
+        }
+        parent = parent.getRightNode();
+        if (parent != null) {
+            parent.delete(target);
+        }
+    }
 }

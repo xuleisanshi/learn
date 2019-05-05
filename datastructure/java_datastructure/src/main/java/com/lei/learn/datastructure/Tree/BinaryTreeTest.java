@@ -39,6 +39,11 @@ public class BinaryTreeTest {
         System.out.println(treeNode1);
         System.out.println(treeNode1.getValue());
 
+        System.out.println("=========delete a node========");
+        binaryTree.frontShow();
+        binaryTree.delete("E");
+        binaryTree.frontShow();
+
 
     }
 }

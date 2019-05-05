@@ -34,4 +34,12 @@ public class BinaryTree {
     public TreeNode midSearch(String target) {
         return this.getRootNode().midSearch(target);
     }
+
+    public void delete(String target) {
+        if (this.getRootNode().getValue()==target){
+            this.setRootNode(null);
+        }else {
+            this.getRootNode().delete(target);
+        }
+    }
 }
