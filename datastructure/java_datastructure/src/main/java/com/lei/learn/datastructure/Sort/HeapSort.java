@@ -11,6 +11,13 @@ public class HeapSort {
     System.out.println(Arrays.toString(tmp));
   }
 
+  /**
+   * 降序用大顶堆
+   * 升序用小顶堆
+   *
+   * @param array
+   */
+
   public static void heapSort(int[] array) {
     //TODO
 
