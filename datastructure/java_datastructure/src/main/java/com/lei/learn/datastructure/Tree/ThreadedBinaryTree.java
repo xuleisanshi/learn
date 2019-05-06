@@ -1,6 +1,7 @@
 package com.lei.learn.datastructure.Tree;
 
 public class ThreadedBinaryTree {
+
     private ThreadedNode root;
     //临时存储前驱节点
     private ThreadedNode preNode;
@@ -13,8 +14,15 @@ public class ThreadedBinaryTree {
         this.preNode = preNode;
     }
 
-
     public ThreadedBinaryTree(ThreadedNode root) {
+        this.root = root;
+    }
+
+    public ThreadedNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(ThreadedNode root) {
         this.root = root;
     }
 
@@ -58,18 +66,11 @@ public class ThreadedBinaryTree {
             preNode.setRightType(1);
 
         }
-
         //处理右子树
         threadNodes(node.getRightNode());
 
 
     }
 
-    public ThreadedNode getRoot() {
-        return root;
-    }
 
-    public void setRoot(ThreadedNode root) {
-        this.root = root;
-    }
 }
