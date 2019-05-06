@@ -239,6 +239,56 @@ pets:
 pet: [cat, dog, pig]
 ```
 
+#### 3, 配置文件值注入
+
+配置文件
+
+```yaml
+person:
+  name: zhangsan
+  age: 18
+  birth: 2017/12/12
+  maps: {k1: v1, k2: v2}
+  lists:
+    - lisi
+    - wangwu
+  dog:
+    name: xiaoguo
+    age: 1
+```
+
+javaBean
+
+```java
+/**
+ * 将配置文件中的每一个属性值，映射到这个组件中
+ *
+ * @ConfigurationProperties,告诉spring boot将奔雷中的所有属性和配置文件中相关的配置进行绑定
+ * prefix="person":配置文件中哪个下面的所有属性进行一一映射
+ * <p>
+ * 只有这个组件在容器中，才能使用容器中提供的@ConfigurationProperties功能
+ */
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {
+  private String Name;
+  private Integer age;
+  private Date birth;
+  private Map<String, Object> maps;
+  private List<Object> lists;
+  private Dog dog;
+```
+
+我们可以导入配置文件处理器，以后编写文件就会有提示
+
+```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+```
+
 
 
 
