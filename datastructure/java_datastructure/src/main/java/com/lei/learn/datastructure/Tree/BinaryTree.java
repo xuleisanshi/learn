@@ -1,7 +1,5 @@
 package com.lei.learn.datastructure.Tree;
 
-import apple.laf.JRSUIUtils;
-
 public class BinaryTree {
 
     private TreeNode rootNode;

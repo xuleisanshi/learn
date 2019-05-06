@@ -1,16 +1,19 @@
 package com.lei.learn.sprintBoot.controller;
 
-import org.springframework.stereotype.Controller;
+import com.lei.learn.sprintBoot.bean.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloWorldController {
 
-    @ResponseBody
+    @Autowired
+    Person person;
     @RequestMapping("/hello")
     public String hello() {
-        return "Hello World";
+        return person.getName();
     }
 
 }
