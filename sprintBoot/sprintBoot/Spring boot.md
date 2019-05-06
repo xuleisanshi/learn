@@ -111,13 +111,135 @@ public @interface EnableAutoConfiguration {
 
 给容器导入组件？
 
-AutoConfigurationImportSelector导入组件选择器：导入哪些组件的选择器；
+ AutoConfigurationImportSelector导入组件选择器：导入哪些组件的选择器；
 
 将所有需要导入的组件以全类名的方式返回，这些组件就会被添加到容器中，会给容器中倒入非常多的自动配置类（xxAutoConfiguration）：就是给容器中倒入这个场景需要的所有组件，并配置好这些组件。
 
 ![自动配置类](assets/configuration.png)
 
 有了自动配置类，免去了手动编写配置和注入功能组件等的工作。
+
+```java
+SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader)
+```
+
+==Springboot在启动的时候从类路径下的META-INF/spring.factories中获取EnableAutoConfiguration指定的值，将这些值座位自动配置类导入到容器中，自动配置类就生效了，帮我们进行自动配置工作；==以前我们需要自己配置的东西，自动配置类都帮我们做。
+
+J2EE的整合整体解决方案和自动配置都在spring-boot-autoconfigure-2.14.RELEASE.jar;
+
+### 3， 使用Spring Initializer 快速创建Spring Boot项目
+
+IDE都支持使用Spring Initializer快速创建项目
+
+- 主程序已经好了，只需要编写自己的逻辑
+- resources文件夹中目录结构
+  - static：保存所有的静态资源，js，css image
+  - templates：保存所有的模板界面，
+  - application.properties： springboot的配置文件，可以修改一些默认配置
+
+
+
+## 二，配置文
+
+### 1, 配置文件
+
+Spring boot使用一个全局的配置文件，配置文件名是固定的：
+
+application.properties
+
+application.yml
+
+yml, （yaml aint’t markup language）
+
+YAML a markup language:是一种标记语言
+
+YAML ：不是一种标记语言
+
+标记语言：
+
+yaml是以数据为中心，例如
+
+```yaml
+server:
+    port:8082
+```
+
+### 2， YAML 语法
+
+#### 1, 基本语法
+
+1， k:(空格) v：表示一堆键值对，空格必须要有
+
+2， 以**空格**的缩进来表示层级关系；只要左对齐的一列数据，都是同一个层级的，如下例：
+
+```yaml
+server:
+  port: 8000
+---
+spring:
+  profiles: default
+  security:
+    user:
+      password: weak
+```
+
+3， 属性和值大小写敏感
+
+#### 2，值的写法
+
+##### 字面量：普通的值(数字，字符串，布尔)
+
+k: v，字面直接来写
+
+​	字符串默认不用加上单引号或者双引号
+
+​	“”：双引号，不会转义字符串里的特殊字符，特殊字符会座位本身想表示的意思。
+
+​			name: “zhangsan \n lisi” 
+
+​			output: zhangsan 换行 lisi
+
+​	‘’： 会转义特殊字符，特殊字符就会被转义为一个普通的字符串数据
+
+​			name: ‘zhangsan \n lisi’
+
+​			output: ‘zhangsan \n lisi’
+
+##### 对象，Map（属性和值）（键值对）：
+
+k: v：在下一行来写对象的属性和值的关系；注意缩进
+
+​			对象还是k: v的表达方式
+
+```yaml
+server:
+  port: 8000
+---
+spring:
+  profiles: default
+  security:
+    user:
+      password: weak
+```
+
+##### 数组（List, set）
+
+用- 值表示数组的一个元素
+
+```yaml
+pets:
+ - cat
+ - dog
+ - pig
+```
+
+行内写法
+
+```
+pet: [cat, dog, pig]
+```
+
+
 
 
 
