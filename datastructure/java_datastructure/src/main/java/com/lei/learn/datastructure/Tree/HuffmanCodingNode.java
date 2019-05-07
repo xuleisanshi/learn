@@ -1,21 +1,21 @@
 package com.lei.learn.datastructure.Tree;
 
 public class HuffmanCodingNode implements Comparable<HuffmanCodingNode> {
-  private byte data;
+  private Byte data;
   private int weight;
   private HuffmanCodingNode leftNode;
   private HuffmanCodingNode rightNode;
 
-  public HuffmanCodingNode(byte data, int weight) {
+  public HuffmanCodingNode(Byte data, int weight) {
     this.data = data;
     this.weight = weight;
   }
 
-  public byte getData() {
+  public Byte getData() {
     return data;
   }
 
-  public void setData(byte data) {
+  public void setData(Byte data) {
     this.data = data;
   }
 
