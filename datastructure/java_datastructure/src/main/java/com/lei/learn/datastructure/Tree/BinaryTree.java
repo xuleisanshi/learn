@@ -24,15 +24,15 @@ public class BinaryTree {
     this.getRootNode().afterShow();
   }
 
-  public TreeNode frontSearch(String target) {
+  public TreeNode frontSearch(int target) {
     return this.getRootNode().frontSearch(target);
   }
 
-  public TreeNode midSearch(String target) {
+  public TreeNode midSearch(int target) {
     return this.getRootNode().midSearch(target);
   }
 
-  public void delete(String target) {
+  public void delete(int target) {
     if (this.getRootNode().getValue() == target) {
       this.setRootNode(null);
     } else {

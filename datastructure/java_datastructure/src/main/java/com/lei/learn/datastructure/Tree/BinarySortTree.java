@@ -3,8 +3,7 @@ package com.lei.learn.datastructure.Tree;
 public class BinarySortTree {
   private TreeNode rootNode;
 
-  public BinarySortTree(TreeNode rootNode) {
-    this.rootNode = rootNode;
+  public BinarySortTree() {
   }
 
   public TreeNode getRootNode() {
@@ -15,20 +14,21 @@ public class BinarySortTree {
     this.rootNode = rootNode;
   }
 
-  /**
-   * add a new node to a binary sort tree
-   *
-   * @param treeNode
-   */
-  public void add(TreeNode treeNode) {
-
-    //如果是空树，则给root
-    if (this.getRootNode() == null) {
-      return;
+  public void midShow() {
+    if (this.getRootNode() != null) {
+      this.getRootNode().midShow();
     }
-    //如果传入的结点值大，则给左
-    if (treeNode.getValue() < this.getRootNode().getValue()) {
+  }
 
+  public void frontShow() {
+    this.getRootNode().frontShow();
+  }
+
+  public void add(TreeNode node) {
+    if (rootNode == null) {
+      this.setRootNode(node);
+    } else {
+      rootNode.add(node);
     }
   }
 }
