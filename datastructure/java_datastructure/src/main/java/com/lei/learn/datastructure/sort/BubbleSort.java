@@ -1,4 +1,4 @@
-package com.lei.learn.datastructure.Sort;
+package com.lei.learn.datastructure.sort;
 
 import java.util.Arrays;
 
