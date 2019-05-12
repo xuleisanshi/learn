@@ -1,5 +1,7 @@
 package com.lei.learn.datastructure.graph;
 
+import com.lei.learn.datastructure.linearStructue.StackObject;
+
 /**
  * 图
  */
@@ -7,10 +9,59 @@ public class Graph {
     private Vertex[] vertices;
     private int currentSize;
     private int[][] adjMat;
+    private StackObject stack = new StackObject();
+    private int currentIndex = 0;
+
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
+
+    public void setCurrentIndex(int currentIndex) {
+        this.currentIndex = currentIndex;
+    }
 
     public Graph(int size) {
         vertices = new Vertex[size];
         adjMat = new int[size][size];
+    }
+
+
+    /**
+     * 深度优先搜索算法应用
+     */
+    public void dfs() {
+        //找到第0个元素标记为已访问
+        vertices[0].setVisited(true);
+        //把第0个元素放入栈
+        stack.push(vertices[0].getValue());
+        System.out.println(vertices[0].getValue());
+        while (!stack.isEmpty()) {
+            for (int i = currentIndex + 1; i < vertices.length; i++) {
+                //如果和下一个遍历的元素相关联
+                if (adjMat[currentIndex][i] == 1 && vertices[i].isVisited() == false) {
+                    stack.push(vertices[i].getValue());
+                    vertices[i].setVisited(true);
+                    System.out.println(vertices[i].getValue());
+                }
+
+            }
+            //弹出栈顶元素
+            stack.pop();
+            //修改当前位置为栈顶元素的位置
+            if (!stack.isEmpty()) {
+                currentIndex = getIndex(new Vertex(stack.top()));
+            }
+
+        }
+
+    }
+
+    public StackObject getStack() {
+        return stack;
+    }
+
+    public void setStack(StackObject stack) {
+        this.stack = stack;
     }
 
     /**
@@ -30,8 +81,7 @@ public class Graph {
         int index1 = getIndex(v1);
         int index2 = getIndex(v2);
 
-        if (index1>=0&&index2>=0){
-
+        if (index1 >= 0 && index2 >= 0) {
             adjMat[index1][index2] = 1;
             adjMat[index2][index1] = 1;
         }
@@ -75,4 +125,5 @@ public class Graph {
     public void setAdjMat(int[][] adjMat) {
         this.adjMat = adjMat;
     }
+
 }

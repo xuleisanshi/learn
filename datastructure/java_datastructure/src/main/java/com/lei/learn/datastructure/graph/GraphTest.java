@@ -26,6 +26,8 @@ public class GraphTest {
         for (int[] a : graph.getAdjMat()) {
             System.out.println(Arrays.toString(a));
         }
+        //图的遍历
+        graph.dfs();
 
     }
 }
