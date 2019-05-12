@@ -10,5 +10,4 @@
 
 
 [JavaDataStructure]: ./datastructure/java_datastructure/README.md
-[2]: 
-[3]: 
+
