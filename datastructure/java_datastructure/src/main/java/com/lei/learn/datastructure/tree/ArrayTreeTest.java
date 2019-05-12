@@ -1,4 +1,4 @@
-package com.lei.learn.datastructure.Tree;
+package com.lei.learn.datastructure.tree;
 
 public class ArrayTreeTest {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.lei.learn.datastructure.Tree;
+package com.lei.learn.datastructure.tree;
 
 public class HuffmanNode implements Comparable<HuffmanNode> {
   private int value;

@@ -1,6 +1,4 @@
-package com.lei.learn.datastructure.Tree;
-
-import com.lei.learn.datastructure.linearStructue.Node;
+package com.lei.learn.datastructure.tree;
 
 public class BinarySortTree {
   private TreeNode rootNode;
