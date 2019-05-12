@@ -85,5 +85,6 @@ Refer to [This Vedio][StudyVideo]
 datastructure/java_datastructure/src/main/java/com/lei/learn/datastructure/hash/HashTable.java
 
 
-[StudyVideo]: 'https://www.bilibili.com/video/av33835237/'
-[HashCode]: './src/main/java/com/lei/learn/datastructure/hash/HashTable.java'
+[StudyVideo]: https://www.bilibili.com/video/av33835237/ "数据结构与算法基础-java版
+"
+[HashCode]: ./src/main/java/com/lei/learn/datastructure/hash/HashTable.java "hash table"
