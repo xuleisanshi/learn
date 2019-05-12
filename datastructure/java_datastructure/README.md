@@ -1,7 +1,4 @@
-
-[toc]
 # 1. Data Structure(java version)  
-
 Refer to [This Vedio][StudyVideo]  
 
 -------  
