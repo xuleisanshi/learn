@@ -1,12 +1,12 @@
 # 1. Data Structure(java version)  
 Refer to [This Vedio][StudyVideo]  
 
--------  
+-------
 ## 1.1. 算法复杂度分析  
 ### 1.1.1. 时间复杂度分析  
 ### 1.1.2. 空间复杂度分析  
 
--------  
+-------
 
 ## 1.2. 线性存储结构 
 线性存储结构主要有两种存储形式，1，顺序存储结构；2，链式存储结构。
@@ -14,7 +14,7 @@ Refer to [This Vedio][StudyVideo]
 | ------ | ------ | ------ |
 | 特点 | 1，可以随机访问<br /> 2，占用连续的空间，存储分配必须提前进行，即静态分配。一旦分配好了，在对其操作的过程中不变<br />3，插入操作需要移动多个元素  | 1，不可以随机访问<br />2，不需要连续的空间，空间动态分配，即在要创建节点的时候进行空间的划分<br />3，插入操作不需要移动多个元素<br />4，每个结点划一部分空间存储指向下一个节点位置的指针，故存储空间利用率比顺序表稍低。 |
 
-### 1.2.1. 数组  
+### 1.2.1. 数组 Array 
  **特点：** 寻址读取数据比较容易，插入和删除比较困难。
 
 [样例代码][ArrayCode]  
@@ -90,14 +90,42 @@ public int binarySearch(int array[], int targetValue, int low, int high) {
 }
 ```
 
+### 1.2.3. 栈 Stack
+[样例代码][StackCode] 
 
-### 1.2.3. 栈  
-### 1.2.4. 队列  
+![stack][StackPicute]
+
+**常见操作：**
+- 创建一个空的栈
+- 向栈中加入一个元素
+- 移除并返回栈顶元素
+- 返回栈是否为空
+- 栈中元素的个数
+
+### 1.2.4. 队列  Queue
+ [样例代码][QueueCode] 
+
+![Queue][QueuePicute]
+
+**常见操作：**
+- 创建一个空的队列
+- 向队列中添加一个元素
+- 移除并返回队列的第一个元素
+- 返回队列是否为空
+- 返回队列中元素的个数
+
 ### 1.2.5. 单链表  
+ [样例代码][LinkedListCode]   
+
+![LinkedList][LinkedList]  
+
+**常见操作：**
+
+
 ### 1.2.6. 循环链表  
 ### 1.2.7. 双向循环链表  
 ### 1.2.8. 递归  
---------  
+--------
 
 ## 1.3. 排序算法  
 ### 1.3.1. 冒泡排序  
@@ -107,7 +135,7 @@ public int binarySearch(int array[], int targetValue, int low, int high) {
 ### 1.3.5. 选择排序  
 ### 1.3.6. 归并排序  
 ### 1.3.7. 基数排序  
---------  
+--------
 
 ## 1.4. 树  
 ### 1.4.1. 二叉树  
@@ -117,7 +145,7 @@ public int binarySearch(int array[], int targetValue, int low, int high) {
 ### 1.4.5. 二叉排序树  
 ### 1.4.6. 平衡二叉树  
 ### 1.4.7. 其他树  
---------  
+--------
 
 ## 1.5. 哈希表  
 ​		Hash一般翻译做“散列”也有直接音译为“哈希”的就是把任意长度的输入通过散列算法变换成固定长度的输出该输出就是散列值。  
@@ -143,7 +171,7 @@ public int binarySearch(int array[], int targetValue, int low, int high) {
   - 二次探测法  
   - 再哈希法（多个散列函数一般三个可以解决大部分问题
 - 链地址法  
---------  
+--------
 
 ## 1.6. 图  
 ### 1.6.1. 图的概念  
@@ -163,6 +191,18 @@ public int binarySearch(int array[], int targetValue, int low, int high) {
 
 
 
-[StudyVideo]: https://www.bilibili.com/video/av33835237/ "数据结构与算法基础-java版"  
+[StudyVideo]: https://www.bilibili.com/video/av33835237/ "数据结构与算法基础-java版"
 [ArrayCode]:./src/main/java/com/lei/learn/datastructure/linearStructue/ArrayObject.java "Array"
-[HashCode]: ./src/main/java/com/lei/learn/datastructure/hash/HashTable.java "hash table"  
+[StackCode]: ./src/main/java/com/lei/learn/datastructure/linearStructue/StackObject.java "Stack"
+[QueueCode]: ./src/main/java/com/lei/learn/datastructure/linearStructue/Queuebject.java "Queue"
+[LinkedListCode]: ./src/main/java/com/lei/learn/datastructure/linearStructue/Node.java "Linked LiST"
+[HashCode]: ./src/main/java/com/lei/learn/datastructure/hash/HashTable.java "hash table"
+
+
+
+
+[StackPicute]:./assets/stack.png "Stack"
+[QueuePicute]:./assets/queue.png "Queue"
+[LinkedList]: ./assets/linkedlist.png "Linked List"
+
+

@@ -1,15 +1,19 @@
 package com.lei.learn.datastructure.linearStructue;
 
-public class StackObject extends RuntimeException {
-  private String[] elements = new String[0];
+public class StackObject<E> {
+  private E[] elements = (E[]) new Object[0];
 
   public StackObject() {
 
   }
 
-  //TODO push a new element
-  public void push(String element) {
-    String[] temp = new String[elements.length + 1];
+  /**
+   * push a new element to a stack
+   *
+   * @param element
+   */
+  public void push(E element) {
+    E[] temp = (E[]) new Object[elements.length + 1];
     for (int i = 0; i < elements.length; i++) {
       temp[i] = elements[i];
     }
@@ -17,13 +21,17 @@ public class StackObject extends RuntimeException {
     elements = temp;
   }
 
-  //TODO pop the top element and remove it
-  public String pop() {
+  /**
+   * pop the top element and remove it.
+   *
+   * @return
+   */
+  public E pop() {
     if (elements.length == 0) {
       throw new RuntimeException("this is stack is empty");
     }
-    String topElement = elements[elements.length - 1];
-    String[] temp = new String[elements.length - 1];
+    E topElement = elements[elements.length - 1];
+    E[] temp = (E[]) new Object[elements.length - 1];
     for (int i = 0; i < temp.length; i++) {
       temp[i] = elements[i];
     }
@@ -31,13 +39,23 @@ public class StackObject extends RuntimeException {
     return topElement;
   }
 
-  //TODO Is this stack empty
+  /**
+   * is the stack empty
+   *
+   * @return
+   */
   public boolean isEmpty() {
     return elements.length == 0;
   }
 
   //TODO get the top of the stack
-  public String top() {
+
+  /**
+   * get the top of the stack
+   *
+   * @return
+   */
+  public E top() {
     if (elements.length == 0) {
       throw new RuntimeException("this is stack is empty");
     }

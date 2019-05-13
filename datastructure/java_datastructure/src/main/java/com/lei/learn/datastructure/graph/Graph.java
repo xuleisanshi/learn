@@ -9,7 +9,7 @@ public class Graph {
     private Vertex[] vertices;
     private int currentSize;
     private int[][] adjMat;
-    private StackObject stack = new StackObject();
+    private StackObject<String> stack = new StackObject<>();
     private int currentIndex = 0;
 
     public int getCurrentIndex() {
