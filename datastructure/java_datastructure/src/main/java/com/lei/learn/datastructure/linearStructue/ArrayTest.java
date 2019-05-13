@@ -6,11 +6,7 @@ public class ArrayTest {
 
   public static void main(String[] args) {
 
-    int []a = new int[0];
-    System.out.println(a.length);
-    // Test array object
-
-    ArrayObject arrayObject = new ArrayObject();
+    ArrayObject<Integer> arrayObject = new ArrayObject<>();
     arrayObject.add(1);
     arrayObject.add(2);
     arrayObject.add(3);
@@ -22,10 +18,10 @@ public class ArrayTest {
     arrayObject.add(9);
     arrayObject.show();
     System.out.println(arrayObject.size());
-//    System.out.println(Arrays.toString(arrayObject.delete(6)));
-    System.out.println(Arrays.toString(arrayObject.insert(6,6)));
+    //System.out.println(Arrays.toString(arrayObject.delete(6)));
+    System.out.println(Arrays.toString(arrayObject.insert(6, 6)));
 
     System.out.println(arrayObject.linearSearch(6));
-    System.out.println(arrayObject.binarySearch(10));
+    //System.out.println(arrayObject.binarySearch(10));
   }
 }
