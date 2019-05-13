@@ -23,5 +23,19 @@ public class ArrayTest {
 
     System.out.println(arrayObject.linearSearch(6));
     //System.out.println(arrayObject.binarySearch(10));
+
+    int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    System.out.println(binarySearch(array, 13, 0, array.length));
+  }
+
+  public static int binarySearch(int array[], int targetValue, int low, int high) {
+    int mid = low + (high - low) / 2;
+    if (array[mid] == targetValue) {
+      return mid;
+    } else if (array[mid] > targetValue) {
+      return binarySearch(array, targetValue, low, mid - 1);
+    } else {
+      return binarySearch(array, targetValue, mid + 1, high);
+    }
   }
 }

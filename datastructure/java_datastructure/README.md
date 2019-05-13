@@ -30,6 +30,67 @@ Refer to [This Vedio][StudyVideo]
 - 删除: 后边的后移
 
 ### 1.2.2. 查找算法  
+- 顺序查找  
+**基本思想：**   
+顺序查找也称为线形查找，属于无序查找算法。从数据结构线形表的一端开始，顺序扫描，依次将扫描到的结点关键字与给定值k相比较，若相等则表示查找成功；若扫描结束仍没有找到关键字等于k的结点，表示查找失败。  
+**复杂度分析：**   
+查找成功时的平均查找长度为：（假设每个数据元素的概率相等） ASL = 1/n(1+2+3+…+n) = (n+1)/2 ; 当查找不成功时，需要n+1次比较，时间复杂度为O(n); 所以，顺序查找的时间复杂度为O(n)。
+```JAVA
+  public int linearSearch(E targetElement) {
+    int index = -1;
+    for (int i = 0; i < elements.length; i++) {
+      if (elements[i] == targetElement) {
+        index = i;
+        break;
+      }
+    }
+    return index;
+  }
+```
+- 二分法查找
+**基本思想：**  
+也称为是折半查找，属于有序查找算法。用给定值k先与中间结点的关键字比较，中间结点把线形表分成两个子表，若相等则查找成功；若不相等，再根据k与该中间结点关键字的比较结果确定下一步查找哪个子表，这样递归进行，直到查找到或查找结束发现表中没有这样的结点。
+**复杂度分析：**  
+最坏情况下，关键词比较次数为log(n+1)，且期望时间复杂度为O(logn)；  
+代码一：
+```JAVA
+public int binarySearch(int elements[], int targetElement) {
+  int index = -1;
+  int beginIndex = 0;
+  int endIndex = elements.length;
+  //TODO element should be sorted ascending
+  int midIndex = (beginIndex + endIndex) / 2;
+  // the condition to end the loop
+  while (beginIndex < endIndex) {
+    if (elements[midIndex] == targetElement) {
+      index = midIndex;
+      break;
+    } else if (elements[midIndex]>targetElement) {
+      endIndex = midIndex - 1;
+      midIndex = (endIndex + beginIndex) / 2;
+    } else {
+      beginIndex = midIndex + 1;
+      midIndex = (beginIndex + endIndex) / 2;
+    }
+  }
+  return index;
+}
+```
+代码二：递归思想
+```JAVA
+public int binarySearch(int array[], int targetValue, int low, int high) {
+  int mid = low + (high - low) / 2;
+  if (array[mid] == targetValue) {
+    return mid;
+  } else if (array[mid] > targetValue) {
+    return binarySearch(array, targetValue, low, mid - 1);
+  } else {
+    return binarySearch(array, targetValue, mid + 1, high);
+  }
+}
+```
+
+
 ### 1.2.3. 栈  
 ### 1.2.4. 队列  
 ### 1.2.5. 单链表  
