@@ -7,8 +7,28 @@ Refer to [This Vedio][StudyVideo]
 ### 1.1.2. 空间复杂度分析  
 
 -------  
-## 1.2. 线性存储结构  
+
+## 1.2. 线性存储结构 
+线性存储结构主要有两种存储形式，1，顺序存储结构；2，链式存储结构。
+| 线性存储结构 | 顺序存储结构 | 链式存储结构 |
+| ------ | ------ | ------ |
+| 特点 | 1，可以随机访问<br /> 2，占用连续的空间，存储分配必须提前进行，即静态分配。一旦分配好了，在对其操作的过程中不变<br />3，插入操作需要移动多个元素  | 1，不可以随机访问<br />2，不需要连续的空间，空间动态分配，即在要创建节点的时候进行空间的划分<br />3，插入操作不需要移动多个元素<br />4，每个结点划一部分空间存储指向下一个节点位置的指针，故存储空间利用率比顺序表稍低。 |
+
 ### 1.2.1. 数组  
+ **特点：** 寻址读取数据比较容易，插入和删除比较困难。
+
+[样例代码][ArrayCode]  
+
+常见操作：
+- 插入： 后边的后移
+- 遍历
+- 获取数组大小
+- 根据位置，获取当前存储的值
+- 查找
+  - 线性查找
+  - 二分法查找
+- 删除: 后边的后移
+
 ### 1.2.2. 查找算法  
 ### 1.2.3. 栈  
 ### 1.2.4. 队列  
@@ -83,4 +103,5 @@ Refer to [This Vedio][StudyVideo]
 
 
 [StudyVideo]: https://www.bilibili.com/video/av33835237/ "数据结构与算法基础-java版"  
+[ArrayCode]:./src/main/java/com/lei/learn/datastructure/linearStructue/ArrayObject.java "Array"
 [HashCode]: ./src/main/java/com/lei/learn/datastructure/hash/HashTable.java "hash table"  
