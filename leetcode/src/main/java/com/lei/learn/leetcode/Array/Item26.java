@@ -1,4 +1,4 @@
 package com.lei.learn.leetcode.Array;
 
-public class Item26RemoveDuplicates {
+public class Item26 {
 }
