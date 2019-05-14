@@ -36,7 +36,7 @@ public class RadixQueueSort {
         //标记，做循环用
         int k = 1;
         //queue，存储排序时候的临时数字
-        QueueObject[] queueObject = new QueueObject[10];
+        QueueObject<String>[] queueObject = new QueueObject[10];
         for (int i = 0; i < 10; i++) {
             queueObject[i] = new QueueObject();
         }
