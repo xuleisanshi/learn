@@ -4,11 +4,14 @@ import java.util.Arrays;
 
 public class Item26 {
     /**
-     * Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+     * Given a sorted array nums, remove the duplicates in-place such that each
+     * element appear only once and return the new length.
      * <p>
-     * Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+     * Do not allocate extra space for another array, you must do this by modifying
+     * the input array in-place with O(1) extra memory.
      */
     public static int removeDuplicates(int[] nums) {
+
         if (nums.length == 0) {
             return 0;
         }
@@ -20,14 +23,12 @@ public class Item26 {
                 index++;
             }
         }
-        System.out.println(Arrays.toString(nums));
-        return index+1;
+        return index + 1;
 
     }
 
-
     public static void main(String[] args) {
-        int[] array = new int[]{1, 1, 2};
+        int[] array = new int[]{1, 1, 1, 2};
         System.out.println(removeDuplicates(array));
 
     }

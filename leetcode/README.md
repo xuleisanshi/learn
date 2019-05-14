@@ -42,6 +42,17 @@ for (int i = 0; i < len; i++) {
 ```
 [样例代码][Item26]  
 **分析：**   本题题目要求不能复制一个辅助的数组，同时要进行最小的操作数。因此，在此本程序中，主要操作在原数组上进行，空间复杂度是O(1)，进行n次的循环，因此，时间复杂度是O(n).同时需要考虑当数组为空的情况。  
+
+**牛逼的答案**
+```
+int count = 0;
+for (int i=1;i<nums.length;i++){
+    if (nums[i]==nums[i-1])
+        count++;
+    else nums[i-count]=nums[i];
+}
+return nums.length-count;
+```
 **坑：**
 
 
