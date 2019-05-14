@@ -17,4 +17,4 @@
 
 [JavaDataStructure]: ./datastructure/java_datastructure/README.md "数据结构java版本"
 [LeetCode]: ./leetcode/README.md "Leet Code --java"
-[SpringBoot]: ./springboot/README.MD "Spring boot"
+[SpringBoot]: ./springboot/README.md "Spring boot"
