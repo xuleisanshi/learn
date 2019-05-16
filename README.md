@@ -1,7 +1,7 @@
 # Map
 
 ## Data Structure
-[Java Data Structure][JavaDataStructure]
+[Data Structure in Java][JavaDataStructure]
 
 ## Leet Code
 [Leet Code][LeetCode]
