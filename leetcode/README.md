@@ -2,14 +2,34 @@
 
 ## Array
 TODO
-### Item 75
+### Item 75 Sort Colors
+Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+
+Note: You are not suppose to use the library's sort function for this problem.
+
+```
+Example:
+Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+Follow up:
+A rather straight forward solution is a two-pass algorithm using counting sort.
+First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
+Could you come up with a one-pass algorithm using only constant space?
+
+[样例代码][Item75]  
+**分析：**    
+本题目关键是控制好对应index的移动顺序，题目难度不大
+
+**坑：**   
+
 
 ### Item 88. Merge Sorted Array
-
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 
 Note:
-
 The number of elements initialized in nums1 and nums2 are m and n respectively.
 You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
 Example:
@@ -25,7 +45,6 @@ Output: [1,2,2,3,5,6]
 
 **坑：**   
 index！！！对应位置！！！！
-
 
 ### Item 215
 ### Item 167 
@@ -120,5 +139,6 @@ Output: [1,3,12,0,0]
 
 
 [Item26]: ./src/main/java/com/lei/learn/leetcode/Array/Item26.java "Remove Duplicates from Sorted Array"
+[Item75]: ./src/main/java/com/lei/learn/leetcode/Array/Item75.java "Sort Colors"
 [Item88]: ./src/main/java/com/lei/learn/leetcode/Array/Item88.java "Merge Sorted Array"
 [Item286]: ./src/main/java/com/lei/learn/leetcode/Array/Item286.java	"Move Zeros"
