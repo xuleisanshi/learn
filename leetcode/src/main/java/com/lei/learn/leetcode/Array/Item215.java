@@ -1,6 +1,7 @@
 package com.lei.learn.leetcode.Array;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class Item215 {
 
@@ -31,6 +32,15 @@ public class Item215 {
       }
     }
     return nums[k - 1];
+  }
+
+  public static int findKthLargestByHeap(int[] nums, int k) {
+
+    PriorityQueue<Integer> integers = new PriorityQueue<>();
+    for (int i = 0; i < nums.length; i++) {
+      integers.offer(nums[i]);
+    }
+
   }
 
   public static int findKthLargest(int[] nums, int k) {
@@ -66,7 +76,8 @@ public class Item215 {
   public static void main(String[] args) {
     int[] array = new int[]{3, 2, 1, 5, 6, 4};
     int k = 2;
-    System.out.println(findKthLargest1(array, k));
-    System.out.println(findKthLargest(array, k));
+//    System.out.println(findKthLargest1(array, k));
+    //    System.out.println(findKthLargest(array, k));
+    System.out.println(findKthLargestByHeap(array, k));
   }
 }
