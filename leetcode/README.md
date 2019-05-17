@@ -1,7 +1,6 @@
 # Leet Code
 
 ## Array
-TODO
 ### Item 75 Sort Colors
 Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 
@@ -46,8 +45,7 @@ Output: [1,2,2,3,5,6]
 **坑：**   
 index！！！对应位置！！！！
 
-### Item 215
-### Item 167 
+### Item 167
 ### Item 26. Remove Duplicates from Sorted Array
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
@@ -100,6 +98,9 @@ for (int i=1;i<nums.length;i++){
 return nums.length-count;
 ```
 **坑：**
+
+
+### Item 215 Kth Largest Element in an Array
 
 
 
