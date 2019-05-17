@@ -23,19 +23,9 @@ Output: [1,2,2,3,5,6]
 **分析：**    
 本题目关键是控制好对应index的移动顺序，题目难度不大，从最大的开始对比，较大的数放在最后的位置，依次比下去，直到所有的都放好。
 
-**坑：**
+**坑：**   
 index！！！对应位置！！！！
 
-```
-int count = 0;
-for (int i=1;i<nums.length;i++){
-    if (nums[i]==nums[i-1])
-        count++;
-    else nums[i-count]=nums[i];
-}
-return nums.length-count;
-```
-**坑：**
 
 ### Item 215
 ### Item 167 
