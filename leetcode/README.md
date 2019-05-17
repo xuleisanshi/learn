@@ -4,7 +4,39 @@
 TODO
 ### Item 75
 
-### Item 88
+### Item 88. Merge Sorted Array
+
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+Note:
+
+The number of elements initialized in nums1 and nums2 are m and n respectively.
+You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
+Example:
+```
+Input:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+Output: [1,2,2,3,5,6]
+```
+[样例代码][Item88]  
+**分析：**    
+本题目关键是控制好对应index的移动顺序，题目难度不大，从最大的开始对比，较大的数放在最后的位置，依次比下去，直到所有的都放好。
+
+**坑：**
+index！！！对应位置！！！！
+
+```
+int count = 0;
+for (int i=1;i<nums.length;i++){
+    if (nums[i]==nums[i-1])
+        count++;
+    else nums[i-count]=nums[i];
+}
+return nums.length-count;
+```
+**坑：**
+
 ### Item 215
 ### Item 167 
 ### Item 26. Remove Duplicates from Sorted Array
@@ -98,4 +130,5 @@ Output: [1,3,12,0,0]
 
 
 [Item26]: ./src/main/java/com/lei/learn/leetcode/Array/Item26.java "Remove Duplicates from Sorted Array"
+[Item88]: ./src/main/java/com/lei/learn/leetcode/Array/Item88.java "Merge Sorted Array"
 [Item286]: ./src/main/java/com/lei/learn/leetcode/Array/Item286.java	"Move Zeros"
