@@ -34,16 +34,39 @@ public class Item215 {
   }
 
   public static int findKthLargest(int[] nums, int k) {
-    for (int i = 0; i < nums.length; i++) {
 
+    quickSort(nums, 0, nums.length - 1);
+
+    return nums[nums.length - k];
+  }
+
+  private static int[] quickSort(int[] array, int start, int end) {
+    int base = array[start];
+    int low = start;
+    int high = end;
+    if (start < end) {
+      while (low < high) {
+        while (base <= array[high] && high > low) {
+          high--;
+        }
+        array[low] = array[high];
+        while (base >= array[low] && low < high) {
+          low++;
+        }
+        array[high] = array[low];
+      }
+
+      array[low] = base;
+      quickSort(array, start, low);
+      quickSort(array, low + 1, high);
     }
-
-    return 0;
+    return array;
   }
 
   public static void main(String[] args) {
     int[] array = new int[]{3, 2, 1, 5, 6, 4};
     int k = 2;
     System.out.println(findKthLargest1(array, k));
+    System.out.println(findKthLargest(array, k));
   }
 }
