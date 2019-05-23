@@ -9,15 +9,12 @@ public class Item209 {
 
   public static int minSubArrayLen(int s, int[] nums) {
     int low, high;
-    for (int i = 0; i < nums.length - 1; i++) {
-      low = 0;
-      high = low + i;
-      int result = 0;
-      while (result < s) {
+    int gap = 0;
 
-      }
+    while (gap < nums.length) {
     }
-    return result;
+
+    return 0;
   }
 
   public static void main() {
