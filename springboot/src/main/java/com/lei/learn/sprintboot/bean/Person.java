@@ -1,4 +1,4 @@
-package com.lei.learn.sprintBoot.bean;
+package com.lei.learn.sprintboot.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

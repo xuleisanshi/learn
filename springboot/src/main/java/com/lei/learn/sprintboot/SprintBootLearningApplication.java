@@ -1,4 +1,4 @@
-package com.lei.learn.sprintBoot;
+package com.lei.learn.sprintboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

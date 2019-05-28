@@ -1,9 +1,8 @@
-package com.lei.learn.sprintBoot.controller;
+package com.lei.learn.sprintboot.controller;
 
-import com.lei.learn.sprintBoot.bean.Person;
+import com.lei.learn.sprintboot.bean.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
