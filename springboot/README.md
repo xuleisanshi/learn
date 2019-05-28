@@ -291,11 +291,65 @@ public class Person {
 
 
 
+##### 1, properties 配置文件在idea中默认utf-8可能会乱码
+
+![WX20190528-223141@2x](assets/WX20190528-223141@2x.png)
+
+##### 2， @Value获取值与@ConfigurationProperties获取值比较
 
 
 
+|                | @Value       | @ConfigurationProperties |
+| -------------- | ------------ | ------------------------ |
+| 功能           | 一个一个指定 | 批量注入配置文件中的属性 |
+| 松散绑定       | 不支持       | 支持                     |
+| SpEL           | 支持         | 不支持                   |
+| JSR303数据校验 | 不支持       | 支持（@Validated）       |
 
+配置文件yml还是properties他们都能获取值
 
+若只是在某个业务逻辑中需要获取一下配置文件中的某项值，那么我们就用@Value
+
+ 若专门编写了一个javaBean来和配置文件进行映射，直接使用@ConfigurationProperties
+
+##### 3，配置文件注入值数据校验
+
+```java
+@Component
+@ConfigurationProperties(prefix = "person")
+@Validated
+public class Person {
+
+  @Email
+  private String Name;
+  private Integer age;
+  private Date birth;
+  private Map<String, Object> maps;
+  private List<Object> lists;
+  private Dog dog;
+```
+
+##### 4，@PropertySource & @ImportResource
+
+**@ConfigurationProperties**某人从全局的配置文件中获取值
+
+**@PropertySource**指定加载指定的文件
+
+```java
+@PropertySource(value = {"classpath:person.properties"})
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {
+
+  private String Name;
+  private Integer age;
+  private Date birth;
+  private Map<String, Object> maps;
+  private List<Object> lists;
+  private Dog dog;
+```
+
+**@ImportResource**：导入Spring的配置文件，让配置文件中的内容生效
 
 
 
