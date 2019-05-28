@@ -331,7 +331,7 @@ public class Person {
 
 ##### 4，@PropertySource & @ImportResource
 
-**@ConfigurationProperties**某人从全局的配置文件中获取值
+##### 某人从全局的配置文件中获取值
 
 **@PropertySource**指定加载指定的文件
 
@@ -350,6 +350,14 @@ public class Person {
 ```
 
 **@ImportResource**：导入Spring的配置文件，让配置文件中的内容生效
+
+SpringBoot推荐给容器添加组件的方式：推荐使用全注解的方式
+
+1，配置类============================Spring配置文件
+
+
+
+
 
 
 
