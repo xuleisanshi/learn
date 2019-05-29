@@ -43,6 +43,25 @@ public class Item209 {
     return result == Integer.MAX_VALUE ? 0 : result;
   }
 
+  //O(nlogn)
+  public static int minSubArrayLenOlogn(int s, int[] nums) {
+    if (nums.length == 0) {
+      return 0;
+    }
+    int[] sums = new int[nums.length];
+    sums[0] = nums[0];
+    for (int i = 1; i < nums.length; i++) {
+      sums[i] = sums[i - 1] + nums[i];
+    }
+    if (sums[nums.length - 1] < s) {
+      return 0;
+    }
+
+    //sum 是一个有序数组
+
+    return 0;
+  }
+
   public static void main(String[] args) {
 
     int s = 0;
