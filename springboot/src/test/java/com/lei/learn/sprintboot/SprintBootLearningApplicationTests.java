@@ -1,6 +1,6 @@
-package com.lei.learn.sprintBoot;
+package com.lei.learn.sprintboot;
 
-import com.lei.learn.sprintBoot.bean.Person;
+import com.lei.learn.sprintboot.bean.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

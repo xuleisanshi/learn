@@ -45,7 +45,7 @@ public class Item438 {
         List<Integer> list = new ArrayList<>();
         if (s.length() < p.length() || s == null)
             return list;
-        
+
 
         return list;
     }
