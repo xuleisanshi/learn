@@ -1,7 +1,5 @@
 package com.lei.learn.leetcode.Array;
 
-import java.util.Arrays;
-
 public class Item345 {
 
     public static String reverseVowels(String s) {
