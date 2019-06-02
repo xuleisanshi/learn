@@ -1,6 +1,8 @@
 package com.lei.learn.leetcode.Array;
 
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -39,16 +41,6 @@ public class Item438 {
         return list;
     }
 
-
-    public static List<Integer> findAnagrams1(String s, String p) {
-
-        List<Integer> list = new ArrayList<>();
-        if (s.length() < p.length() || s == null)
-            return list;
-
-
-        return list;
-    }
 
     public static void main(String[] args) {
         String s = "ababab";
