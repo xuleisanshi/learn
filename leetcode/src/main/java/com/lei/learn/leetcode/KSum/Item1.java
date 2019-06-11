@@ -1,4 +1,4 @@
-package com.lei.learn.leetcode.CollectionLearn;
+package com.lei.learn.leetcode.KSum;
 
 import java.util.Arrays;
 import java.util.HashMap;

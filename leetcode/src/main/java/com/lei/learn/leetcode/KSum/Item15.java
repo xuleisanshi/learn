@@ -1,4 +1,4 @@
-package com.lei.learn.leetcode.CollectionLearn;
+package com.lei.learn.leetcode.KSum;
 
 import java.util.*;
 
@@ -38,7 +38,7 @@ public class Item15 {
 
     public static void main(String[] args) {
 
-        int[] nums = new int[]{};
+        int[] nums = new int[]{0, 0, 0};
         System.out.println(threeSum(nums));
     }
 }
