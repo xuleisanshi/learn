@@ -2,8 +2,8 @@ package com.lei.learn.leetcode.Linked;
 
 public class ListNode<E> {
 
-    private E data;
-    private ListNode next;
+    public E data;
+    public ListNode next;
 
     public ListNode(E data, ListNode next) {
         this.data = data;
