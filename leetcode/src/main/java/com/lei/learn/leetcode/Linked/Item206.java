@@ -1,7 +1,5 @@
 package com.lei.learn.leetcode.Linked;
 
-import java.util.List;
-
 public class Item206 {
 
     public static ListNode reverseList(ListNode head) {

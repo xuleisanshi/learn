@@ -2,16 +2,16 @@ package com.lei.learn.leetcode.Linked;
 
 public class ListNode<E> {
 
-    public E data;
+    public E val;
     public ListNode next;
 
-    public ListNode(E data, ListNode next) {
-        this.data = data;
+    public ListNode(E val, ListNode next) {
+        this.val = val;
         this.next = next;
     }
 
-    public ListNode(E data) {
-        this.data = data;
+    public ListNode(E val) {
+        this.val = val;
     }
 
     public ListNode(ListNode next) {
@@ -22,12 +22,12 @@ public class ListNode<E> {
     }
 
 
-    public E getData() {
-        return data;
+    public E getVal() {
+        return val;
     }
 
-    public void setData(E data) {
-        this.data = data;
+    public void setVal(E val) {
+        this.val = val;
     }
 
     public ListNode getNext() {
@@ -85,10 +85,10 @@ public class ListNode<E> {
     public void printNode() {
         ListNode currentNode = this;
         while (currentNode.getNext() != null) {
-            System.out.print(currentNode.getData());
+            System.out.print(currentNode.getVal());
             System.out.print("-->");
             currentNode = currentNode.getNext();
         }
-        System.out.println(currentNode.getData());
+        System.out.println(currentNode.getVal());
     }
 }
