@@ -6,6 +6,8 @@
 ## Leet Code
 [Leet Code][LeetCode]
 
+** Linked List需要进一步学习
+
 ## Spring Boot
 [Spring boot][SpringBoot]
 
