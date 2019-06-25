@@ -3,29 +3,28 @@ package com.lei.learn.leetcode.Linked;
 public class Item147 {
     public static ListNode insertionSortList(ListNode head) {
 
-        if (head == null || head.next == null) {
+        if (head == null) {
             return head;
         }
         ListNode fakeHead = new ListNode(0);
         fakeHead.next = head;
-        ListNode cur1 = head;
+        ListNode pre = head;
+        ListNode current = pre.next;
 
-        while (cur1 != null) {
-            ListNode cur2 = head;
-            ListNode pre = fakeHead;
-            while (cur1 != cur2) {
-                if ((int) cur1.val < (int) cur2.val) {
-                    cur2.next = cur1.next;
-                    pre.next = cur1;
-                    cur1.next = cur2;
-
-                } else {
-                    pre = cur2;
-                    cur2 = cur2.next;
+        while (current != null) {
+            ListNode dummy = fakeHead;
+            if ((int) current.val < (int) pre.val) {
+                while ((int) dummy.next.val < (int) current.val && dummy.next != pre) {
+                    dummy = dummy.next;
                 }
-                cur1 = cur1.next;
+                pre.next = current.next;
+                current.next = dummy.next;
+                dummy.next = current;
             }
+            pre=current;
+            current=current.next;
         }
+
         return fakeHead.next;
 
     }
