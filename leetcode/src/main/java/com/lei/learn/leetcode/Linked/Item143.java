@@ -1,11 +1,9 @@
 package com.lei.learn.leetcode.Linked;
 
-import java.util.List;
-
 public class Item143 {
   public static void reorderList(ListNode head) {
 
-    if (head == null || head.next == null) {
+    if (head == null || head.next == null|| head.next.next == null) {
       return;
     }
     ListNode secondList = new ListNode(0);
@@ -18,12 +16,14 @@ public class Item143 {
       secondList = secondList.next;
       slow = slow.next;
     }
-
-    slow.next = null;
     secondList = secondList.next;
-    secondList = reverseList(secondList);
-    head = mergeList(head, secondList);
+    slow = slow.next;
+
+    secondList.next = null;
+    slow = reverseList(slow);
+    slow.printNode();
     head.printNode();
+    head = mergeList(head, slow);
   }
 
   public static ListNode reverseList(ListNode listNode) {
@@ -32,17 +32,17 @@ public class Item143 {
     }
     ListNode pre = null;
     ListNode current = listNode;
-    ListNode next = current.getNext();
+    ListNode next = current.next;
 
     while (next != null) {
-      current.setNext(pre);
+      current.next=pre;
       pre = current;
       current = next;
-      if (next.getNext() == null) {
-        current.setNext(pre);
+      if (next.next == null) {
+        current.next=pre;
         return current;
       } else {
-        next = next.getNext();
+        next = next.next;
       }
     }
     return listNode;
@@ -57,12 +57,16 @@ public class Item143 {
 
     while (cur1.next != null && cur2.next != null) {
       cur1.next = cur2;
+      cur2.next = cur1Node;
       cur1 = cur1Node;
       cur1Node = cur1Node.next;
-      cur2.next = cur1Node;
       cur2 = cur2Node;
       cur2Node = cur2Node.next;
     }
+
+    cur1.next = cur2;
+    cur2.next = cur1Node;
+
     return listNode1;
   }
 
@@ -76,6 +80,6 @@ public class Item143 {
     l1.append(new ListNode(6));
     l1.append(new ListNode(7));
     reorderList(l1);
-
+    l1.printNode();
   }
 }
