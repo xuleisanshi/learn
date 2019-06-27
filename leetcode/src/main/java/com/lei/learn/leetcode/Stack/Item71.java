@@ -22,8 +22,6 @@ public class Item71 {
                 stringStack.push(strings[i]);
             }
         }
-
-
         
 
         if (stringStack.empty()) {
