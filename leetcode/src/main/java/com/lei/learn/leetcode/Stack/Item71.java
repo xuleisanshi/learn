@@ -24,6 +24,8 @@ public class Item71 {
         }
 
 
+        
+
         if (stringStack.empty()) {
             return "/";
         }
