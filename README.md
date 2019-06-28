@@ -36,12 +36,12 @@
 ```:pencil:``` :pencil: 文档相关  
 ```:tada:``` :tada: 创世提交  
 ```:white_check_mark:``` :white_check_mark: 更新测试   
-```:construction:``` :construction: 进行中
+```:construction:``` :construction: 进行中  
 ```:recycle:``` :recycle: 代码重构  
 ```:poop:``` :poop: 需要改进的坏代码  
 ```:twisted_rightwards_arrows:``` :twisted_rightwards_arrows: 合并分支  
 ``` :rewind:``` :rewind: 回滚改动   
-```:truck:``` :truck: 文件移动或者重命名
+```:truck:``` :truck: 文件移动或者重命名   
 ```:see_no_evil:``` :see_no_evil: 添加或者更新.gitignore文件   
 
 
