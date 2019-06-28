@@ -23,9 +23,9 @@
 
 
 
-#Some useful emoji
-:shipit: - :shipit:
-:sparkles: - :sparkles:
-:-1: - :-1:
-:+1: - :+1:
-:clap: - :clap:
+## Some useful emoji
+```:shipit:``` - :shipit:
+```:sparkles:``` - :sparkles:
+```:-1:``` - :-1:
+```:+1:``` - :+1:
+```:clap:``` - :clap:
