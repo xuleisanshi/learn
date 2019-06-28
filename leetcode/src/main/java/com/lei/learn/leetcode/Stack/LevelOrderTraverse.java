@@ -18,10 +18,9 @@ public class LevelOrderTraverse {
     }
   }
 
-  public static List<Integer> lelelOrderTraverse(TreeNode treeNode) {
-
+  public static List<Integer> levelOrderTraverse(TreeNode treeNode) {
     List<Integer> result = new ArrayList<>();
-    Queue<TreeNode> queue = new LinkedList<TreeNode>();
+    Queue<TreeNode> queue = new LinkedList<>();
     queue.add(treeNode);
     while (!queue.isEmpty()) {
       TreeNode tmp = queue.poll();
@@ -54,7 +53,6 @@ public class LevelOrderTraverse {
     node3.left = node6;
     node3.right = node7;
     node4.left = node8;
-
-    System.out.println(lelelOrderTraverse(node1).toString());
+    System.out.println(levelOrderTraverse(node1).toString());
   }
 }
