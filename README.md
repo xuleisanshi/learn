@@ -11,6 +11,11 @@
 ## Leet Code
 [Leet Code][LeetCode]
 
+### TODO:
+- [ ] Item279
+- [ ] Item102
+- [ ] Item126
+
 ** Linked List需要进一步学习
 
 ## Spring Boot

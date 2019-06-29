@@ -38,7 +38,6 @@ public class Item199 {
                 if (tmp.right != null) {
                     queue.add(tmp.right);
                 }
-
             }
         }
         return res;
