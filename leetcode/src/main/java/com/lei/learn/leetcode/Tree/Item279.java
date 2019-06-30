@@ -3,7 +3,7 @@ package com.lei.learn.leetcode.Tree;
 public class Item279 {
     public static int numSquares(int n) {
         assert n >= 0;
-        
+
 
         return 0;
     }
