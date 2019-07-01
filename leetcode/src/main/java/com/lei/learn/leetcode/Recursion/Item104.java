@@ -16,14 +16,26 @@ public class Item104 {
 
 
     public static int maxDepth(TreeNode root) {
-        if (root==null) {
+        if (root == null) {
             return 0;
         }
-        int leftResult = maxDepth(root.left) + 1;
-        int rightResult = maxDepth(root.right) + 1;
+        int leftResult = maxDepth(root.left);
+        int rightResult = maxDepth(root.right);
 
-        return Math.max(leftResult, rightResult);
+        return Math.max(leftResult, rightResult) + 1;
     }
+
+    public static int minDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftResult = minDepth(root.left);
+        int rightResult = minDepth(root.right);
+
+        return (leftResult == 0 || rightResult == 0) ? leftResult + rightResult + 1 : Math.min(leftResult, rightResult) + 1;
+
+    }
+
 
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(1);
@@ -39,17 +51,17 @@ public class Item104 {
         TreeNode node11 = new TreeNode(11);
 
         node1.left = node2;
-        node1.right = node3;
-        node2.left = node4;
-        node2.right = node5;
-        node3.left = node6;
-        node3.right = node7;
-        node4.left = node8;
-        node4.right = node9;
-        node6.left = node10;
-        node6.right = node11;
+//        node1.right = node3;
+//        node2.left = node4;
+//        node2.right = node5;
+//        node3.left = node6;
+//        node3.right = node7;
+//        node4.left = node8;
+//        node4.right = node9;
+//        node6.left = node10;
+//        node6.right = node11;
 
-        System.out.println(maxDepth(node1));
+        System.out.println(minDepth(node1));
     }
 
 
