@@ -39,9 +39,24 @@ public class Item226 {
         if (p.val == q.val)
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         return false;
+    }
+
+
+    public static boolean isSymmetric(TreeNode root) {
+
+        return isMirror(root, root);
 
 
     }
+
+    public static boolean isMirror(TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null) return true;
+        if (root1 == null || root2 == null) return false;
+        return (root1.val == root2.val)
+                && isMirror(root1.right, root2.left)
+                && isMirror(root1.left, root2.right);
+    }
+
 
     public static void main(String[] args) {
 //        TreeNode node1 = new TreeNode(1);
