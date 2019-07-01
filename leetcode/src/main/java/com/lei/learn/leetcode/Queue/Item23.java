@@ -1,4 +1,4 @@
-package com.lei.learn.leetcode.Recursion;
+package com.lei.learn.leetcode.Queue;
 
 import java.util.PriorityQueue;
 
