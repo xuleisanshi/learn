@@ -17,6 +17,8 @@
 - [ ] Item126
 
 ** Linked List需要进一步学习
+** 平衡二叉树 item110
+** 完全二叉树 item222
 
 ## Spring Boot
 [Spring boot][SpringBoot]
