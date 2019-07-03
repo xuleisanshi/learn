@@ -16,13 +16,9 @@ public class Item112 {
 
     public static boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) return false;
-        if (root.left == null && root.right == null && root.val == sum) return true;
-        if (root.left == null || root.right == null) {
-            if (root.val == sum)
-                return false;
-        }
-        sum = sum - root.val;
-        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum);
+        if (root.left == null && root.right == null) return sum == root.val;
+
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
 
     }
 
