@@ -8,10 +8,10 @@ public class Item236 {
         TreeNode right;
 
         TreeNode(int x) {
+
             val = x;
         }
     }
-
 
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
@@ -19,12 +19,10 @@ public class Item236 {
 
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
-        return left == null ? right : right == null?left:root;
+        return left == null ? right : right == null ? left : root;
 
     }
 
-
     public static void main(String[] args) {
-
     }
 }
