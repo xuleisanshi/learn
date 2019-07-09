@@ -17,11 +17,11 @@
 - [ ] Item126
 
 ## 需要进一步学习  
-** Linked List
-** 平衡二叉树 item110  
-** 完全二叉树 item222  
-** 二叉搜索树   
-** 回溯法   
+* Linked List   
+* 平衡二叉树 item110    
+* 完全二叉树 item222     
+* 二叉搜索树   
+* 回溯法   
 
 ## Spring Boot
 [Spring boot][SpringBoot]
