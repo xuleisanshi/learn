@@ -1,6 +1,7 @@
 package com.lei.learn.leetcode.DynamicProgramming;
 
 public class Item343 {
+
     public static int integerBreak(int n) {
         int[] memo = new int[n];
         assert n > 0;
@@ -19,10 +20,7 @@ public class Item343 {
         return Math.max(a, Math.max(b, c));
     }
 
-
     public static void main(String[] args) {
         System.out.println(integerBreak(10));
     }
-
-
 }
