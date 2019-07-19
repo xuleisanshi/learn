@@ -1,4 +1,4 @@
-package com.lei.learn.leetcode;
+package com.lei.learn.leetcode.HackerRank;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
