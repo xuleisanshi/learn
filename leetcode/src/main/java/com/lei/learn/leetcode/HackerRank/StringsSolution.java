@@ -12,7 +12,6 @@ public class StringsSolution {
     String[] strings = new String[myInt+1];
     for (int i = 0; i < strings.length; i++) {
       strings[i] = scanner.nextLine();
-      scanner
     }
     for (int i = 1; i < strings.length; i++) {
       reView(strings[i]);
