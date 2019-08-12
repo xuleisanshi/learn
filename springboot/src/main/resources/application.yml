@@ -1,14 +1,7 @@
 server:
   port: 8081
-
-#person:
-#  name: zhangsan
-#  age: 19
-#  birth: 2017/12/12
-#  maps: {k1: v1, k2: v2}
-#  lists:
-#    - lisi
-#    - wangwu
-#  dog:
-#    name: xiaoguo
-#    age: 1
+logging:
+  level:
+    org.springframework.web: TRACE
+    guru.springframework.controllers: TRACE
+    org.hibernate: TRACE
