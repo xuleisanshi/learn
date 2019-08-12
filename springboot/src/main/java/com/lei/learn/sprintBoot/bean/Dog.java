@@ -1,4 +1,4 @@
-package com.lei.learn.sprintboot.bean;
+package com.lei.learn.sprintBoot.bean;
 
 public class Dog {
   private String name;
