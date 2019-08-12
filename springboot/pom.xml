@@ -64,6 +64,12 @@
             <artifactId>h2</artifactId>
         </dependency>
 
+        <!--security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--将应用打包成一个jar-->

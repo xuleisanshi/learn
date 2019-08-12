@@ -21,15 +21,21 @@ public class ReadingListController {
     this.readingListReopsitory = readingListReopsitory;
   }
 
-  @RequestMapping(value = "/{reader}", method = RequestMethod.GET)
+  @RequestMapping(value = "/readinglist/{reader}", method = RequestMethod.GET)
   public List<Book> readersBooks(@PathVariable("reader") String reader) {
     List<Book> books = readingListReopsitory.findByReader(reader);
     return books;
   }
 
-  @RequestMapping(value = "/{reader}", method = RequestMethod.POST)
-  public Book addReadingList(@PathVariable String reader, Book book) {
-    book.setReader(reader);
+  @RequestMapping(value = "/readinglist", method = RequestMethod.GET)
+  public List<Book> readersBooks() {
+    List<Book> books = readingListReopsitory.findAll();
+    return books;
+  }
+
+  @RequestMapping(value = "/readinglist", method = RequestMethod.POST)
+  public Book addReadingList(Book book) {
+    assert !book.getReader().isEmpty();
     return readingListReopsitory.save(book);
   }
 }

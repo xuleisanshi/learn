@@ -1,4 +1,4 @@
-package com.lei.learn.sprintboot;
+package com.lei.learn.sprintBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SprintBootLearningApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SprintBootLearningApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(SprintBootLearningApplication.class, args);
+  }
 }

@@ -1,4 +1,4 @@
-package com.lei.learn.sprintboot;
+package com.lei.learn.sprintBoot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,11 +10,10 @@ import org.springframework.test.context.junit4.SpringRunner;
  * 测试期间，可以自动注入等容器的功能
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=SprintBootLearningApplication.class)
+@SpringBootTest(classes = SprintBootLearningApplication.class)
 public class SprintBootLearningApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
-
+  @Test
+  public void contextLoads() {
+  }
 }
