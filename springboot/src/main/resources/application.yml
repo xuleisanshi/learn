@@ -2,6 +2,6 @@ server:
   port: 8081
 logging:
   level:
-    org.springframework.web: TRACE
-    guru.springframework.controllers: TRACE
-    org.hibernate: TRACE
+    org.springframework.web: INFO
+    guru.springframework.controllers: INFO
+    org.hibernate: INFO
