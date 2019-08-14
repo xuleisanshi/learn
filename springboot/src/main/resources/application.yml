@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/learn
+    username: learn
+    password: learn
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+logging:
+  level:
+    org.hibernate.type: trace
+
+
