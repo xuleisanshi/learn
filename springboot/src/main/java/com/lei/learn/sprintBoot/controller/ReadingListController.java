@@ -4,6 +4,7 @@ import com.lei.learn.sprintBoot.bean.Book;
 import com.lei.learn.sprintBoot.repo.ReadingListReopsitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,8 +35,7 @@ public class ReadingListController {
   }
 
   @RequestMapping(value = "/readinglist", method = RequestMethod.POST)
-  public Book addReadingList(Book book) {
-    assert !book.getReader().isEmpty();
+  public Book addReadingList(@RequestBody Book book) {
     return readingListReopsitory.save(book);
   }
 }
