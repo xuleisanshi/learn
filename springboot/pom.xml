@@ -75,7 +75,7 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-        
+
         <!--for automatic recommend-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -83,6 +83,19 @@
             <optional>true</optional>
         </dependency>
 
+        <!--thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+
+        <!--热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <!--将应用打包成一个jar-->

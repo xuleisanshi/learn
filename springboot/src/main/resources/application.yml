@@ -12,12 +12,18 @@ spring:
       ddl-auto: create
     properties:
       hibernate.jdbc.lob.non_contextual_creation: true
+  security:
+    user:
+      name: user
+      password: password
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
 logging:
   level:
     tomcat: INFO
     org.hibernate.type: INFO
     root: INFO
-    org.springframework.boot.autoconfigure.security: INFO
 management:
   endpoint:
     beans:
