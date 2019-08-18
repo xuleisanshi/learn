@@ -29,5 +29,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/user").hasRole("USER");
         http.rememberMe();
+        http.logout().logoutSuccessUrl("/");
     }
 }

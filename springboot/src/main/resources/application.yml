@@ -19,6 +19,9 @@ logging:
   level:
     tomcat: INFO
     org.hibernate.type: INFO
+    org:
+      springframework:
+        security: DEBUG
     root: INFO
 management:
   endpoint:
