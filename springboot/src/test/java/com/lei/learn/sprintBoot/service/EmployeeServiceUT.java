@@ -2,14 +2,16 @@ package com.lei.learn.sprintBoot.service;
 
 import com.lei.learn.sprintBoot.bean.Employee;
 import com.lei.learn.sprintBoot.repo.EmployeeRepository;
+import com.lei.learn.sprintBoot.service.Impl.EmployeeServiceImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -20,13 +22,31 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
 public class EmployeeServiceUT {
+
+    /**
+     * To check the Service class, we need to have an instance of Service class created and available as a @Bean so
+     * that we can @Autowire it in our test class. This configuration is achieved by using the @TestConfiguration annotation.
+     *
+     * During component scanning, we might find components or configurations created only for specific tests
+     * accidentally get picked up everywhere. To help prevent that, Spring Boot provides @TestConfiguration annotation
+     * that can be used on classes in src/test/java to indicate that they should not be picked up by scanning.
+     *
+     * Another interesting thing here is the use of @MockBean. It creates a Mock for the EmployeeRepository
+     * which can be used to bypass the call to the actual EmployeeRepository:
+     */
+    @TestConfiguration
+    static class EmployeeServiceUTContextConfiguration {
+        @Bean
+        public EmployeeService employeeService() {
+            return new EmployeeServiceImpl();
+        }
+    }
 
     @Autowired
     private EmployeeService employeeService;
 
-    @Mock
+    @MockBean
     private EmployeeRepository employeeRepository;
 
     @Before
@@ -55,7 +75,7 @@ public class EmployeeServiceUT {
     }
 
     @Test
-    public void getEmployeeByName() {
+    public void Test_getEmployeeByName() {
         Employee res = employeeService.getEmployeeByName("lei");
         assertThat(res.getName()).isEqualTo("lei");
         assertThat(res.getAge()).isEqualTo(18);
