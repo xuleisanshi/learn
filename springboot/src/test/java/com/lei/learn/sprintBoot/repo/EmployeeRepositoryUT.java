@@ -1,8 +1,7 @@
-package com.lei.learn.sprintBoot.repository;
+package com.lei.learn.sprintBoot.repo;
 
 
 import com.lei.learn.sprintBoot.bean.Employee;
-import com.lei.learn.sprintBoot.repo.EmployeeRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
