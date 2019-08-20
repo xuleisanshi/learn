@@ -20,7 +20,8 @@
         <jackson.version>2.9.9</jackson.version>
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
-        <thymeleaf-extras-springsecurity4.version>3.0.4.RELEASE</thymeleaf-extras-springsecurity4.version>
+        <thymeleaf-extras-springsecurity4.version>3.0.4.RELEASE
+        </thymeleaf-extras-springsecurity4.version>
     </properties>
 
     <dependencies>
@@ -69,13 +70,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
 
         <!--for automatic recommend-->

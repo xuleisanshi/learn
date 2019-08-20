@@ -2,6 +2,8 @@ package com.lei.learn.sprintBoot.controller;
 
 import com.lei.learn.sprintBoot.bean.Employee;
 import com.lei.learn.sprintBoot.service.EmployeeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +18,7 @@ import java.util.List;
 public class EmployeeController {
 
   private EmployeeService employeeService;
+  private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
 
   @Autowired
   public EmployeeController(EmployeeService employeeService) {

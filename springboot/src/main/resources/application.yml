@@ -21,13 +21,19 @@ logging:
     org.hibernate.type: INFO
     org:
       springframework:
-        security: DEBUG
+        security: INFO
     root: INFO
-management:
-  endpoint:
-    beans:
-      enabled: true
+    web: TRACE
+log4j:
 
+
+
+#management:
+#  endpoint:
+#    beans:
+#      enabled: true
+#    loggers:
+#      enabled: true
 
 
 
