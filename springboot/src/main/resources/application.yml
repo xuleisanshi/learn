@@ -26,13 +26,5 @@ logging:
     web: TRACE
 
 
-#management:
-#  endpoint:
-#    beans:
-#      enabled: true
-#    loggers:
-#      enabled: true
-
-
 
 
