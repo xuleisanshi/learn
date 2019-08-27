@@ -1,14 +1,16 @@
 package com.lei.learn.sprintBoot.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
+import com.lei.learn.sprintBoot.aop.RequestLog;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+//@Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
-    @RequestMapping("/")
+  /*  @RequestMapping("/")
     public String index(ModelMap map) {
         map.addAttribute("host", "https://www.baidu.com/");
         return "index";
@@ -28,5 +30,11 @@ public class HelloWorldController {
     public String hello(Model model) {
         model.addAttribute("hello", "world");
         return "user";
-    }
+    }*/
+
+  @RequestMapping(value = "/world", method = RequestMethod.GET)
+  @RequestLog()
+  public String helloWorld() {
+    return "hello world";
+  }
 }
