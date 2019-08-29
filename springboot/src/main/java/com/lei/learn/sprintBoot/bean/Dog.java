@@ -6,34 +6,35 @@ import javax.persistence.*;
 public class Dog {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String name;
     private Integer age;
 
-    @OneToOne(mappedBy = "dog")
+    @OneToOne(mappedBy = "dog", fetch = FetchType.EAGER)
     private DogInfo dogInfo;
 
     public Dog() {
     }
 
-  public String getId() {
-    return id;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public void setId(String id) {
-    this.id = id;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public DogInfo getDogInfo() {
-    return dogInfo;
-  }
+    public DogInfo getDogInfo() {
+        return dogInfo;
+    }
 
-  public void setDogInfo(DogInfo dogInfo) {
-    this.dogInfo = dogInfo;
-  }
+    public void setDogInfo(DogInfo dogInfo) {
+        this.dogInfo = dogInfo;
+    }
 
-  public String getName() {
+    public String getName() {
         return name;
     }
 
