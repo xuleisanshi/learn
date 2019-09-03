@@ -7,5 +7,13 @@
     <groupId>com.lei.learn</groupId>
     <artifactId>javabasic</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.lei.learn</groupId>
+            <artifactId>sprintBoot</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
