@@ -1,4 +1,4 @@
-package com.lei.learn.javabasic;
+package com.lei.learn.javabasic.basic;
 
 public class stringTest {
 
