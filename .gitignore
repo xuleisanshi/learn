@@ -6,6 +6,7 @@
 **/mvnw.cmd
 **/target/
 **/.DS_Store
+**/*.class
 ### STS ###
 .apt_generated
 .classpath
@@ -20,6 +21,7 @@
 *.iws
 *.iml
 *.ipr
+
 
 ### NetBeans ###
 /nbproject/private/
