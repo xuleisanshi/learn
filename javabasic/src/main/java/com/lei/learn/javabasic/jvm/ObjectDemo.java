@@ -18,4 +18,5 @@ public class ObjectDemo {
     System.out.println("============第二次实例化===========");
     ObjectDemo objectDemo2 = new ObjectDemo();
   }
+
 }
