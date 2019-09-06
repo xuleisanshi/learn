@@ -49,7 +49,6 @@ public class varableDemo {
 
         System.out.println(demo1==demo2);
         System.out.println(demo1==demo3);
-
         demo3.equals(demo1);
     }
 
