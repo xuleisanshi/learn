@@ -1,5 +1,7 @@
 package com.lei.learn.javabasic.basic;
 
+import java.util.Arrays;
+
 public class varableDemo {
 
     public static class Demo {
@@ -30,6 +32,32 @@ public class varableDemo {
         return a + b + c;
     }
 
+    /**
+     * 值传递
+     *
+     * @param
+     */
+
+    public static void method(int a) {
+        a = 1;
+        a++;
+        System.out.println(a);
+
+    }
+
+
+    /**
+     * 方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。
+     * @param a
+     */
+    public static void method(int[] a) {
+        if (a.length > 0) {
+            a[0] = 11;
+        }
+        System.out.println(Arrays.toString(a));
+
+    }
+
 
     public static void main(String[] args) {
         /**
@@ -47,9 +75,22 @@ public class varableDemo {
         System.out.println(demo2.hashCode());
         System.out.println(demo3.hashCode());
 
-        System.out.println(demo1==demo2);
-        System.out.println(demo1==demo3);
+        System.out.println(demo1 == demo2);
+        System.out.println(demo1 == demo3);
         demo3.equals(demo1);
+
+
+        System.out.println("============值传递==========");
+
+        int a = 11;
+        method(a);
+        System.out.println(a);
+
+        int[] b = {1, 2, 3, 4, 5, 6};
+        System.out.println(Arrays.toString(b));
+        method(b);
+        System.out.println(Arrays.toString(b));
+
     }
 
 }
