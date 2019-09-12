@@ -1,8 +1,8 @@
 package com.lei.learn.javabasic.collection;
 
-import org.h2.engine.User;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 public class HashMapDemo {
 
@@ -11,10 +11,23 @@ public class HashMapDemo {
 
         hashMap.put(null, 1);//hashMap 可以用null为key
         hashMap.put("a", 1);//hashMap 可以用null为key
-        hashMap.put("b", 1);//hashMap 可以用null为key
+        hashMap.put("b", 2);//hashMap 可以用null为key
+
+        System.out.println(hashMap.put("c", 3));
+        System.out.println(hashMap.put("c", 4));
+        System.out.println(hashMap.put("c", 5));
+        System.out.println(hashMap);
+        System.out.println("=========遍历hash map ============");
+        Set<String> list = hashMap.keySet();
+        for (String key : list) {
+            System.out.print(hashMap.get(key) + " ");
+        }
+
+        Collection<Integer> list1 = hashMap.values();
+        for (Integer integer : list1) {
+            System.out.print(integer + " ");
+        }
 
 
-        System.out.println(hashMap.size());
-        System.out.println(hashMap.toString());
     }
 }
