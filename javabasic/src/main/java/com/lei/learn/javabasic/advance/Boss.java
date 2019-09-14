@@ -4,7 +4,7 @@ public class Boss implements CallBackService {
 
     public void bookFlyTicket(String string, Employee employee) {
         System.out.println("Boss let employee to book a ticket");
-        employee.bookFlyTicket();
+        employee.bookFlyTicket(this);
     }
 
     @Override
