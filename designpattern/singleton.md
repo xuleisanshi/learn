@@ -26,7 +26,22 @@
 
 ## 2，实现
 ### 2.1，饿汉方式
+```
+public class SingletonHungry {
+    public static SingletonHungry uniqueInstance = new SingletonHungry();
+
+    private SingletonHungry() {
+    }
+
+    public static SingletonHungry getUniqueInstance() {
+        return uniqueInstance;
+    }
+}
+```
+
 ### 2.2，懒汉方式
+
+
 
 ## 3，应用
 
