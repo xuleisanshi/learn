@@ -178,7 +178,7 @@ public enum SingletonEnum {
 > 保证了线程安全
 > 单元素的枚举类型已经成为实现Singleton的最佳方法。
 
-## 2.4，静态内部类[推荐]
+### 2.4，静态内部类[推荐]
 ```
 public class SingletonStaticClass {
 
