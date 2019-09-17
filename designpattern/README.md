@@ -1,7 +1,10 @@
-# 创建者模式
-## 单例模式
+
+# Spring中的设计模式
+
+## 创建者模式
+### 单例模式
 [Singleton][Singleton]
-## 工厂模式
+### 工厂模式
 [Factory][Factory]
 
 
