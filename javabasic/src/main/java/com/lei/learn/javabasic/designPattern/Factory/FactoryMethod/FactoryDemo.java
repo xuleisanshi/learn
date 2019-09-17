@@ -7,5 +7,5 @@ public class FactoryDemo {
     appleFactory.makePhone().getName();
     huaWeiFactory.makePhone().getName();
 
-l  }
+  }
 }
