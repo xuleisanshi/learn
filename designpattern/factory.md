@@ -129,6 +129,8 @@ HuaWei produced!
 ### 2.1.3，简单工厂适用场景
 > - 适用于创建的对象较少的情况
 > - 客户端不关心工厂对象实例化的过程
+> - Spring中，bean工厂是用的简单工厂模式来实现的
+
 ### 2.1.4，简单工厂优缺点
 **优点：**
 > - 此类中有必要的判断条件，可以决定在什么时候创建哪一种类的实例化。
@@ -160,10 +162,94 @@ HuaWei produced!
 
 
 #### 2.2.3，工厂方法模式实现
+**抽象产品：** 手机类
+```
+public abstract class Phone {
+    public void getName(){
+    }
+}
+```
+**具体产品：**
 
+**Apple手机：**
+```
+public class Apple extends Phone {
+    @Override
+    public void getName() {
+        System.out.println("Apple phone");
+    }
+}
+```
+**Huawei手机：**
+```
+public class HuaWei extends Phone {
+
+  @Override
+  public void getName() {
+    System.out.println("HuaWei");
+  }
+}
+
+```
+
+**抽象工厂：** 手机制造工厂
+```
+public interface Factory {
+    public Phone makePhone();
+}
+```
+**具体工厂：**
+**Apple手机工厂：**
+```
+public class AppleFactory implements Factory {
+
+    @Override
+    public Phone makePhone() {
+        return new Apple();
+    }
+}
+```
+**Huawei手机工厂：**
+```
+public class HuaWeiFactory implements Factory {
+  @Override
+  public Phone makePhone() {
+    return new HuaWei();
+  }
+}
+```
+
+**测试：**
+```
+public class FactoryDemo {
+  public static void main(String[] args) {
+    AppleFactory appleFactory = new AppleFactory();
+    HuaWeiFactory huaWeiFactory = new HuaWeiFactory();
+    appleFactory.makePhone().getName();
+    huaWeiFactory.makePhone().getName();
+  }
+}
+```
+**输出：**
+```
+Apple phone
+HuaWei
+```
 #### 2.2.4，工厂方法模式的优缺点
+**优点：**
+> - 主要针对简单工厂模式中的问题而设计，满足了开闭原则（OCP）。
+> - 维护性很好，增加或者删除产品，只需要修改对应的具体工厂和具体产品类即可。
+
+**缺点：**
+> - 如果某具体产品需要进行修改，可能需要工厂类
+> - 此外，若要增加新的产品类，就要增加对应的产品工厂，增加额外的开发量。
 
 #### 2.2.5，工厂方法模式的使用场景
+- 一个类实例化的过程中，不需要知道具体的产品类名，只需要知道对应的工厂即可。
+- 工厂模式中，通过面向对象的多态性和里氏代换原则，来创建产品。程序运行过程中，子类对象覆盖父类对象，从而使得系统更容易拓展
+
+**工厂方法模式在Spring中的应用**
+
 
 
 ## 3，总结，对比
