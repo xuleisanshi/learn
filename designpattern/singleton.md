@@ -193,7 +193,6 @@ public class SingletonStaticClass {
     return SingletonHelper.instance;
   }
 }
-
 ```
 **分析：**
 > 同样使用了类加载机制，在类第一次加载的时候，对类进行了实例化，因此不存在线程安全的问题。
