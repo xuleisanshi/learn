@@ -85,5 +85,79 @@ Login Game
 Play super cell game, like coc
 Logout Game
 ```
+### 2.2，JDK动态代理模式
+> JDK中有对动态代理的支持，通过JDK中Proxy类来实现。
+> JDK动态代理模式的原理用一句话来概括就是：通过类装载器拿到真实实现类（被代理的类）和真实实现类（被代理的类）的接口的字节码文件，然后构成生成一个代理类（是具有被代理类字节码的文件）。生成完成后，就回到了静态代理的模式上进行。
+
+**几个重点的知识点：**
+**InvocationHandler**
+在JDK动态模式中，代理类不再实现抽象主题接口类，而是实现```InvocationHandler```接口，该接口只有一个方法```invoke```方法。
+
+**invoke**
+
+**Proxy.newProxyInstance**
+
+**抽象主题角色：**
+```
+public interface Game {
+    public void playGame();
+}
+```
+**真实主题角色：**
+```
+public class SuperCell implements Game {
+    @Override
+    public void playGame() {
+        System.out.println("Play super cell game, like coc");
+    }
+}
+```
+**代理主题角色：**
+```
+public class Tencent implements InvocationHandler {
+    private Object proxied;
+
+    public Tencent(Object proxied) {
+        this.proxied = proxied;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        login();
+        Object object = method.invoke(proxied, args);
+        logout();
+        return object;
+    }
+
+
+    private void login() {
+        System.out.println("Login Game");
+    }
+
+    private void logout() {
+        System.out.println("Logout Game");
+    }
+}
+```
+
+**测试：**
+```
+public class ProxyDemo {
+    public static void main(String[] args) {
+        SuperCell superCell = new SuperCell();
+        Tencent tencent = new Tencent(superCell);
+        Game game = (Game) Proxy.newProxyInstance(SuperCell.class.getClassLoader(), SuperCell.class.getInterfaces(), tencent);
+        game.playGame();
+    }
+}
+
+```
+
+**输出：**
+```
+Login Game
+Play super cell game, like coc
+Logout Game
+```
 
 ## 3，代理模式应用

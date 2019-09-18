@@ -18,7 +18,7 @@ public class Tencent implements InvocationHandler {
         login();
         Object object = method.invoke(proxied, args);
         logout();
-        return object;
+        return null;
     }
 
 
