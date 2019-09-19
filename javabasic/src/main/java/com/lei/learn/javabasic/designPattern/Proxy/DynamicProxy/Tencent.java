@@ -13,6 +13,14 @@ public class Tencent implements InvocationHandler {
         this.proxied = proxied;
     }
 
+    /**
+     *
+     * @param proxy 代理类的代理的真实代理对象，$Proxy
+     * @param method 调用的被代理的真实对象的方法的方法对象
+     * @param args 代理对象方法传递的参数
+     * @return
+     * @throws Throwable
+     */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         login();
