@@ -90,12 +90,43 @@ Logout Game
 > JDK动态代理模式的原理用一句话来概括就是：通过类装载器拿到真实实现类（被代理的类）和真实实现类（被代理的类）的接口的字节码文件，然后构成生成一个代理类（是具有被代理类字节码的文件）。生成完成后，就回到了静态代理的模式上进行。
 
 **几个重点的知识点：**
-**InvocationHandler**
-在JDK动态模式中，代理类不再实现抽象主题接口类，而是实现```InvocationHandler```接口，该接口只有一个方法```invoke```方法。
+
+**InvocationHandler**  
+> - 在JDK动态模式中，代理类不再实现抽象主题接口类，而是实现》 ```InvocationHandler```接口，该接口只有一个方法```invoke```方法。
+每一个动态代理类的调用处理程序都必须实现```InvocationHandler```接口，并且每个代理类的实例都关联到了实现该接口的动态代理类调用的处理程序中。
+>- 当通过动态代理对象调用一个方法的时候，这个方法的调用就会被转发到实现```InvocationHandler```接口类的```invoke()```方法来调用。
 
 **invoke**
+```
+ /**
+     *
+     * @param proxy 代理类的代理的真实代理对象，$Proxy
+     * @param method 调用的被代理的真实对象的方法的方法对象
+     * @param args 代理对象方法传递的参数
+     * @return
+     * @throws Throwable
+     */
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        login();
+        Object object = method.invoke(proxied, args);
+        logout();
+        return null;
+    }
+```
+> ```invoke()```方法有三个参数，上问注释代码中解释了其含义。
 
-**Proxy.newProxyInstance**
+**Proxy**  
+> Proxy主要用来创建一个代理对象的类，其提供了很多方法，但是最常用的是```newProxyInstance()```方法。
+
+```
+newProxyInstance(ClassLoader loader,Class<?>[] interfaces,InvocationHandler h) throws IllegalArgumentException
+```  
+> 其接受三个参数:
+> -  loader: 一个classLoader的对象，定义了由哪个classLoader对象对生成的代理类进行加载。
+> - 一个interface对象数组，表示我们将要给我们的代理对象提供一组什么样的接口，若提供了这样子个接口对象数组，那么也就是声明了代理类实现了这些接口，代理类就可以调用接口中声明的所有方法。
+> - h是一个```InvocationHandler```对象的实例，表示当动态代理对象调用方法的时候会关联到哪一个实现了```InvocationHandler```的代理对象上，并最终由其调用。
+
 
 **抽象主题角色：**
 ```
