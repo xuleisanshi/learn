@@ -150,7 +150,6 @@ public class ProxyDemo {
         game.playGame();
     }
 }
-
 ```
 
 **输出：**
