@@ -127,6 +127,8 @@ newProxyInstance(ClassLoader loader,Class<?>[] interfaces,InvocationHandler h) t
 > - 一个interface对象数组，表示我们将要给我们的代理对象提供一组什么样的接口，若提供了这样子个接口对象数组，那么也就是声明了代理类实现了这些接口，代理类就可以调用接口中声明的所有方法。
 > - h是一个```InvocationHandler```对象的实例，表示当动态代理对象调用方法的时候会关联到哪一个实现了```InvocationHandler```的代理对象上，并最终由其调用。
 
+**时序图：**
+待补充
 
 **抽象主题角色：**
 ```
@@ -198,6 +200,9 @@ Logout Game
 **几个重要的类或接口：**
 > - Enhancer类，是一个非常重要的类，它允许非接口类型创建一个Java代理，Enhancer动态的创建给定类的子类并且拦截代理类的所有方法，和JDK动态代理不一样的是不管是接口还是类，它都可以能正常工作。
 > - Methodinterceptor接口，通用的回调（callback）类型，经常被AOP用来实现拦截（intercept）方法的调用，其只有一个方法```intercept```。
+
+**时序图：**
+待补充
 
 **真实主题角色：**
 ```
