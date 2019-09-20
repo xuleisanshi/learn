@@ -191,4 +191,5 @@ Play super cell game, like coc
 Logout Game
 ```
 
+### 2.3，CGLIB动态代理
 ## 3，代理模式应用
