@@ -48,6 +48,7 @@
 
 ### 3.4，常见的行为型设计模式
 [Template][Template]
+[Strategy][Strategy]
 
 
 
@@ -58,3 +59,4 @@
 [Factory]: ./factory.md "factory"
 [Proxy]: ./proxy.md "proxy"
 [Template]: ./tempalte.md "template"
+[Strategy]: ./strategy.md "strategy"
