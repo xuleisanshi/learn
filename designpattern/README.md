@@ -14,8 +14,8 @@
 
 
 ### 1.3，常见的创建型模式
-[Singleton][Singleton]
-[Factory][Factory]
+[Singleton][Singleton]  
+[Factory][Factory]
 
 ## 2，结构型模式 Structural Pattern
 ### 2.1，什么是结构型模式
