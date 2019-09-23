@@ -29,7 +29,8 @@
 > 待补充
 
 ### 2.3，常见的结构型模式
-[Proxy][Proxy]
+[Proxy][Proxy]  
+[Adapter][Adapter]
 
 ## 3，行为型模式 Behavioral Pattern
 ### 3.1，什么是行为型模式
@@ -47,6 +48,7 @@
 待补充
 
 ### 3.4，常见的行为型设计模式
+
 [Template][Template]
 [Strategy][Strategy]
 
@@ -60,3 +62,4 @@
 [Proxy]: ./proxy.md "proxy"
 [Template]: ./tempalte.md "template"
 [Strategy]: ./strategy.md "strategy"
+[Adapter]: ./adapter.md "adapter"
