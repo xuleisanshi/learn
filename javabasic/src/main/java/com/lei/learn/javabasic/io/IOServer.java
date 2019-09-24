@@ -1,4 +1,4 @@
-package com.lei.learn.javabasic.thread.io;
+package com.lei.learn.javabasic.io;
 
 import java.io.IOException;
 import java.io.InputStream;
