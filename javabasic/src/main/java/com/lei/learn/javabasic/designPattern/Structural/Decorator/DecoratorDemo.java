@@ -9,5 +9,8 @@ public class DecoratorDemo {
     noodles = new Beef(noodles);
 
     System.out.println(noodles.concreteNoodles());
+    noodles = new Pork(noodles);
+    System.out.println(noodles.concreteNoodles());
+
   }
 }

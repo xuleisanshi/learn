@@ -1,16 +1,15 @@
 package com.lei.learn.javabasic.designPattern.Structural.Decorator;
 
-
-public class Beef extends JiaoTou {
+public class Pork extends JiaoTou {
   Noodles noodles;
 
-  public Beef(Noodles noodles) {
+  public Pork(Noodles noodles) {
     this.noodles = noodles;
   }
 
   @Override
   public String getJiaoTou() {
-    return "Beef";
+    return "Pork";
   }
 
   @Override
