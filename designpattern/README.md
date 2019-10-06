@@ -31,6 +31,7 @@
 ### 2.3，常见的结构型模式
 [Proxy][Proxy]  
 [Adapter][Adapter]
+[Decorator][Decorator]
 
 ## 3，行为型模式 Behavioral Pattern
 ### 3.1，什么是行为型模式
@@ -63,3 +64,4 @@
 [Template]: ./tempalte.md "template"
 [Strategy]: ./strategy.md "strategy"
 [Adapter]: ./adapter.md "adapter"
+[Decorator]: ./decorator.md "decorator"
