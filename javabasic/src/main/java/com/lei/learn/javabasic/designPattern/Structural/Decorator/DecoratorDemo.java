@@ -12,5 +12,10 @@ public class DecoratorDemo {
     noodles = new Pork(noodles);
     System.out.println(noodles.concreteNoodles());
 
+    Noodles ximian = new XiMian();
+    ximian = new Beef(ximian);
+    ximian = new Pork(ximian);
+
+    System.out.println(ximian.concreteNoodles());
   }
 }

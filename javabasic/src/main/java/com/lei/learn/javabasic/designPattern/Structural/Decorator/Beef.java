@@ -15,6 +15,6 @@ public class Beef extends JiaoTou {
 
   @Override
   public String concreteNoodles() {
-    return noodles.concreteNoodles() + " " + getJiaoTou();
+    return noodles.concreteNoodles() + " add " + getJiaoTou();
   }
 }
