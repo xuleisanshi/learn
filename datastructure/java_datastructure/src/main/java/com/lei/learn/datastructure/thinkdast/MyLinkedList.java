@@ -61,6 +61,18 @@ public class MyLinkedList<E> implements List<E> {
 
   @Override
   public boolean remove(Object o) {
+    MyNode cursorNode = head;
+    MyNode beforeNode = new MyNode();
+    beforeNode.next = cursorNode;
+    while (cursorNode.next != null) {
+      if (equals(o, cursorNode.getObject())) {
+        beforeNode = cursorNode.next;
+        size--;
+        return true;
+      }
+      beforeNode = beforeNode.next;
+      cursorNode = cursorNode.next;
+    }
     return false;
   }
 
@@ -117,12 +129,20 @@ public class MyLinkedList<E> implements List<E> {
     if (index < 0 || index > size) {
       throw new IndexOutOfBoundsException();
     }
-    MyNode cursorNode = new MyNode();
-    cursorNode.next = head;
-    for (int i = 0; i <= index; i++) {
-      if (i == index) {
+    MyNode newNode = new MyNode(element);
+    if (index == 0) {
+      newNode.next = head;
+      head = newNode;
+    } else {
+      MyNode cursorNode = new MyNode();
+      cursorNode.next = head;
+      for (int i = 0; i < index; i++) {
+        cursorNode = cursorNode.next;
       }
+      newNode.next = cursorNode.next;
+      cursorNode.next = newNode;
     }
+    size++;
   }
 
   @Override
@@ -170,3 +190,5 @@ public class MyLinkedList<E> implements List<E> {
     return null;
   }
 }
+
+

@@ -2,13 +2,13 @@ package com.lei.learn.datastructure.thinkdast;
 
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.typeCompatibleWith;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
+import sun.misc.Timeable;
 
 public class MyLinkedListTest {
 
@@ -66,7 +66,26 @@ public class MyLinkedListTest {
 
     }
 
-    list.add(1,11);
-    assertThat(list.get(1),is(11));
+    list.add(1, 11);
+    assertThat(list.get(1), is(11));
+    list.add(0, 01);
+    assertThat(list.get(0), is(01));
+    System.out.println(list.toString());
   }
+
+  @Test
+  public void testRemoveElement() {
+    MyLinkedList linkedList = new MyLinkedList();
+    linkedList.add(0);
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(null);
+    linkedList.add(3);
+
+    assertTrue(linkedList.remove(null));
+    assertThat(linkedList.size(), is(4));
+
+    Profiler profiler;
+  }
+
 }
